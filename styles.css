@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1, h3 {
+  text-decoration: underline;
+  color: #339;
+}
+
+p {
+  margin-bottom: 2em;
+}
