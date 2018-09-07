@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>arielbk portfolio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,21 +17,27 @@
       <h1>ariel <br>buchwald <br> kearney</h1>
       <h3>web developer</h3>
 
-      <div class="biophoto"></div>
+      <img class="biophoto" src="images/arielbk.jpg">
     </header>
 
     <!-- BIO SECTION -->
     <section>
-        <p>A couple of sentences about me goes in here.</p>
+        <p>I love to code, mostly in JavaScript, and I'm looking for a team to do this with and learn.</p>
     </section>
     
     <!-- CONTACT SECTION -->
     <section>
-      <h3>Connect with me</h3>
-      <p>Check out my code on <a href="https://github.com/arielbk">GitHub</a>.</p>
-      <h3>Get in touch</h3>
-      <p>Here would be some kind of contact form?</p>
-      <p>Or maybe actually just some contact details.</p>
+      <h3 class="connect">Connect</h3>
+      <div class="contact-route">
+        <a href="https://github.com/arielbk">
+          <i class="contact-icon fab fa-github-square"></i>
+        </a>
+        <a href="mailto:buchwald.kearney@gmail.com">
+          <i class="contact-icon fas fa-envelope"></i>
+        </a>
+      </div>
+
+      
     </section>
 
     </section>
@@ -38,10 +45,12 @@
 
   <!-- PROJECTS SECTION -->
   <section class="projects">
-    <h3>Projects</h3>
-    <p>
-      The newest projects (and ones I'm probably most proud of) are at the top. Click on a project to see some of the processes that went into it.
-    </p>
+    <header>
+        <h1>Projects</h1>
+        <p class="projects-lead">
+          Newer projects are at the top. Click on a project to see more.
+        </p>
+    </header>
 
 
     <section class="project">
@@ -54,10 +63,16 @@
         <p>
           This project is currently a proof-of-concept — a fully functional frontend-only app.
         </p>
-
+        
         <span class="skill-tab">JavaScript</span>
         <span class="skill-tab">React</span>
         <span class="skill-tab">Sketch</span>
+
+        <div class="project-options">
+          <a href="#">More</a>
+          <a href="#">Code</a>
+          <a href="#">Demo</a>
+        </div>
       </div>
     </section>
 
@@ -75,8 +90,38 @@
         <span class="skill-tab">JavaScript</span>
         <span class="skill-tab">React</span>
         <span class="skill-tab">Sketch</span>
+
+        <div class="project-options">
+            <a href="#">More</a>
+            <a href="#">Code</a>
+            <a href="#">Demo</a>
+          </div>
       </div>
     </section>
+
+    <section class="project">
+        <img class="project-thumb" src="images/marijap/main-screen.png" alt="Marija P project main page screenshot">
+        <div class="project-text">
+          <h4>Marija P portfolio</h4>
+          <p>
+            A design/coding collaboration for the UX designer Marija Peraic's portfolio.
+          </p>
+          <p>
+            This gave me some insight into developing a project with the end user in mind.
+          </p>
+  
+          <span class="skill-tab">Bootstrap</span>
+          <span class="skill-tab">Sass</span>
+          <span class="skill-tab">JavaScript</span>
+          <span class="skill-tab">jQuery</span>
+
+          <div class="project-options">
+              <a href="#">More</a>
+              <a href="#">Code</a>
+              <a href="#">Demo</a>
+            </div>
+        </div>
+      </section>
 
     <section class="project">
       <img class="project-thumb" src="images/datefacts/main-screen.png" alt="Date facts project main page screenshot">
@@ -91,6 +136,12 @@
 
         <span class="skill-tab">JavaScript</span>
         <span class="skill-tab">React</span>
+
+        <div class="project-options">
+            <a href="#">More</a>
+            <a href="#">Code</a>
+            <a href="#">Demo</a>
+          </div>
       </div>
     </section>
 
@@ -107,24 +158,12 @@
 
         <span class="skill-tab">JavaScript</span>
         <span class="skill-tab">React</span>
-      </div>
-    </section>
 
-    <section class="project">
-      <img class="project-thumb" src="images/marijap/main-screen.png" alt="Marija P project main page screenshot">
-      <div class="project-text">
-        <h4>Marija P portfolio</h4>
-        <p>
-          A design/coding collaboration for the UX designer Marija Peraic's portfolio.
-        </p>
-        <p>
-          This gave me some insight into developing a project with the end user in mind.
-        </p>
-
-        <span class="skill-tab">Bootstrap</span>
-        <span class="skill-tab">Sass</span>
-        <span class="skill-tab">JavaScript</span>
-        <span class="skill-tab">jQuery</span>
+        <div class="project-options">
+            <a href="#">More</a>
+            <a href="#">Code</a>
+            <a href="#">Demo</a>
+          </div>
       </div>
     </section>
 
@@ -143,6 +182,11 @@
           <span class="skill-tab">Flask</span>
           <span class="skill-tab">JavaScript</span>
 
+          <div class="project-options">
+              <a href="#">More</a>
+              <a href="#">Code</a>
+              <a href="#">Demo</a>
+            </div>
         </div>
     </section>
 
