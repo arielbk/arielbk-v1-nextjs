@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  background: #edeeef;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+
+  display: flex;
+}
+
+.infobar {
+  flex: none;
+  flex-basis: 380px;
+
+  position: relative;
+  background: #4d4d5a;
+  color: #ccc;
+  width: 380px;
+  height: 100vh;
+}
+
+.infobar-content {
+  width: 380px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2.2em;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+
+.contact-route {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.contact-route p {
+  margin-top: .5em;
+}
+
+.contact-icon {
+  font-size: 2.5em;
+  color: #8c8c9c;
+  padding: 0 1em;
+}
+.contact-icon:hover {
+  color: #ccc;
+}
+
+.projects {
+  padding: 6rem 4.5rem 3rem;
+  max-width: 1200px;
+}
+
+.projects header {
+  margin-bottom: 6rem;
+}
+
+header {
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+}
+
+.biophoto {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 2em auto;
+  background: #ccc;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+h3, h4 {
+  color: #8c8c9c;
+}
+
+.infobar h3 {
+  margin-top: .3em;
+}
+
+h3.connect {
+  margin-top: 2em;
+}
+
+.infobar h1 {
+  color: #eee;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+}
+
+p.projects-lead {
+  font-size: 1.8em;
+  color: #8c8c9c;
+}
+
+a {
+  color: #333;
+}
+
+.project {
+  margin: 1em 0;
+  padding: 3em 0 4em 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 2px solid #ddd;
+}
+
+.skill-tab {
+  font-size: .9em;
+  background: #777;
+  color: #fff;
+  padding: .2em .7em .15em;
+  border-radius: 20px;
+  /* margin: 1em; */
+  margin-bottom: .4em;
+}
+.skill-tab:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+.project-thumb {
+  width: 54%;
+  flex-basis: 20%;
+  box-shadow: 
+              0 15px 35px rgba(37, 37, 80, 0.1),
+              0 5px 15px rgba(0,0,0,.06);
+}
+.project-text {
+  width: 40%;
+  padding: 1rem;
+  background: #fff;
+}
+
+.project-options {
+  margin: 2em 0; 
+}
+.project-options a {
+  padding-right: .5em;
+}
+
+@media screen and (max-width: 1100px) {
+  .projects {
+    padding: 4em;
+  }
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-thumb {
+    width: 100%;
+  }
+  .project-text {
+    width: 100%;
+  }
+  p.projects-lead {
+    font-size: 1.2em;
+  }
+
+  .infobar {
+    flex-basis: 300px;
+    transition: .27s;
+  }
+  .infobar-content {
+    width: 300px;
+    transition: .27s;
+    padding: 1.7em;
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+
+  body {
+    display: block;
+  }
+  .infobar-content {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: visible;
+  }
+  .projects {
+    padding: 3em 2.5em;
+  }
+}
