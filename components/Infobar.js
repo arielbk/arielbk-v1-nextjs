@@ -25,10 +25,8 @@ export default () => (
           <i className="contact-icon fas fa-envelope"></i>
         </a>
       </div>
-
-      
     </section>
-
+    
     </section>
   </div>
 )
