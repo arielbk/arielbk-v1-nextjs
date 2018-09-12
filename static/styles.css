@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  background: #edeeef;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.content {
+  display: flex;
+}
+
+.infobar {
+  flex: none;
+  flex-basis: 380px;
+
+  position: relative;
+  background: #4d4d5a;
+  color: #ccc;
+  width: 380px;
+}
+
+.infobar-content {
+  width: 380px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2.2em;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+
+.infobar {
+  flex-basis: 300px;
+  transition: .27s;
+}
+.infobar-content {
+  width: 300px;
+  transition: .27s;
+  padding: 1.7em;
+}
+
+.contact-route {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.contact-route p {
+  margin-top: .5em;
+}
+
+.contact-icon {
+  font-size: 2.5em;
+  color: #8c8c9c;
+  padding: 0 1em;
+}
+.contact-icon:hover {
+  color: #ccc;
+}
+
+.portfolio {
+  padding: 6rem 4.5rem 3rem;
+  max-width: 1200px;
+}
+
+.portfolio header {
+  margin-bottom: 6rem;
+}
+
+.biophoto {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 2em auto;
+  background: #ccc;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+h3, h4 {
+  color: #8c8c9c;
+}
+
+.infobar h3 {
+  margin-top: .3em;
+}
+
+h3.connect {
+  margin-top: 2em;
+}
+
+.infobar h1 {
+  color: #eee;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+}
+
+p.portfolio-lead {
+  font-size: 1.6em;
+  color: #8c8c9c;
+}
+
+a {
+  color: #333;
+}
+
+.project {
+  margin: 1em 0;
+  padding: 3em 0 4em 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #ddd;
+}
+
+.skill-tab {
+  font-size: .9em;
+  background: #999;
+  color: #fff;
+  padding: .2em .7em .15em;
+  border-radius: 20px;
+  margin: .5em .1em;
+  display: inline-block;
+}
+.skill-tab:hover {
+  background: #333;
+  cursor: pointer;
+}
+
+.project-thumb {
+  width: 54%;
+  flex-basis: 20%;
+  box-shadow: 
+              0 15px 35px rgba(37, 37, 80, 0.1),
+              0 5px 15px rgba(0,0,0,.06);
+}
+.project-text {
+  width: 40%;
+  padding: 1rem;
+  background: #fff;
+}
+
+.project-options {
+  margin: 4em 0; 
+}
+.project-options a {
+  background: #8c8c9c;
+  padding: 1em 2em;
+  margin-right: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+.project-options a:hover {
+  background: #4d4d5a;
+}
+
+@media screen and (max-width: 1140px) {
+  .portfolio {
+    padding: 4em;
+  }
+  .portfolio header {
+    margin-bottom: 3rem;
+  }
+  
+  .project {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-thumb {
+    width: 100%;
+  }
+  .project-text {
+    width: 100%;
+    text-align: center;
+  }
+  p.portfolio-lead {
+    font-size: 1.2em;
+  }
+
+  .infobar {
+    flex-basis: 300px;
+    transition: .27s;
+  }
+  .infobar-content {
+    width: 300px;
+    transition: .27s;
+    padding: 1.7em;
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+
+  .content {
+    display: block;
+  }
+  .infobar {
+    width: 100%;
+  }
+  .infobar-content {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow-y: visible;
+  }
+  .portfolio {
+    padding: 3em 2.5em;
+  }
+}
