@@ -126,6 +126,7 @@ p.portfolio__lead {
   margin: 2.4rem 0 0 0;
   padding: 3em 0 0 0;
   border-top: 2px solid var(--lightestgrey);
+  position: relative;
 }
 
 .project__title {
@@ -149,6 +150,7 @@ p.portfolio__lead {
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
+  filter: grayscale(0.5);
 }
 
 .project__body {
@@ -156,7 +158,19 @@ p.portfolio__lead {
 }
 
 .project__skill {
-  display: none;
+  padding: .6rem;
+  display: inline-block;
+  width: 120px;
+  background: var(--black);
+  color: var(--lightestgrey);
+  border-radius: 0 25px 25px 0;
+  margin: .5rem 0;
+}
+.project__skills {
+  top: 10rem;
+  width: 120px;
+  position: absolute;
+  z-index: 999;
 }
 
 .project__actions {
