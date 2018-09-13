@@ -2,7 +2,7 @@ import Project from './Project';
 
 const projects = [
   {
-    name: 'Lucid',
+    name: 'Lucid — Productivity Frontend App',
     image: 'static/images/lucid/main-screen.png',
     blurb: [
       "This was a project that I undertook as part of a 'Chingu Cohort', a community coding project.",
@@ -76,8 +76,8 @@ const projects = [
 export default () => (
   <section className="portfolio">
     <header>
-        <h1>Projects</h1>
-        <p className="portfolio-lead">
+        <h1 className="portfolio__title">My projects</h1>
+        <p className="portfolio__lead">
           A selection of coding projects, with the more recent at the top.
         </p>
     </header>
