@@ -61,6 +61,12 @@ a {
   transition: .27s;
 }
 
+.infobar__arrow {
+  position: absolute;
+  left: 0;
+  top: 2.6em;
+}
+
 .infobar__container {
   width: 380px;
   height: 100vh;
@@ -85,13 +91,14 @@ a {
 
 .infobar__caption {
   margin-top: .5rem;
-  margin-bottom: 7.8rem;
+  margin-bottom: 5rem;
 }
 
 .infobar__biophoto {
   display: block;
   width: 100%;
   margin: 0;
+  border-radius: 3px;
 }
 
 .infobar__biotext {
@@ -101,8 +108,9 @@ a {
 /* portfolio section */
 
 .portfolio {
-  padding: 4.7rem;
+  padding: 4.7rem 4rem;
   max-width: 1200px;
+  position: relative;
 }
 
 .portfolio__title {
@@ -116,25 +124,34 @@ p.portfolio__lead {
 
 .project {
   margin: 2.4rem 0 0 0;
-  padding: 3em 0 4em 0;
+  padding: 3em 0 0 0;
   border-top: 2px solid var(--lightestgrey);
 }
 
 .project__title {
   font-size: 1.25rem;
-  color: var(--black);
+  color: var(--darkgrey);
   margin: 0 0 2.4rem 0;
+  display: inline-block;
+}
+
+.project__date {
+  margin-left: 1em;
+  color: var(--medgrey);
+  width: 100%;
+  text-align: right;
 }
 
 .project__thumb {
   width: 100%;
   margin-bottom: 2.6rem;
+  border-radius: 3px;
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
 }
 
-.project__text {
+.project__body {
   width: 100%;
 }
 
@@ -143,64 +160,61 @@ p.portfolio__lead {
 }
 
 .project__actions {
-  margin: 2.6rem 0; 
+  margin: 2.6rem 0 3.8rem 0; 
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.project__btn {
+a.project__btn {
   background: var(--darkgrey);
-  padding: 1em 2em;
-  margin-right: 1em;
+  padding: 1em;
   color: #fff;
   text-decoration: none;
-  width: 40%;
+  width: 47%;
   text-align: center;
+  border-radius: 3px;
 }
-.project__btn:hover {
+a.project__btn:hover {
   background: var(--medgrey);
 }
 
-.project__btn:hover {
-  background: var(--darkgrey);
+.project__btn .fas {
+  padding: 0 .4rem;
+  color: var(--lightgrey);
 }
 
-/* 
-@media screen and (max-width: 1140px) {
-  .portfolio {
-    padding: 4em;
-  }
+
+@media screen and (min-width: 1250px) {
   .portfolio header {
     margin-bottom: 3rem;
   }
   
-  .project {
+  .project__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5.2rem;
+  }
+  .project__thumb {
+    width: 62%;
+    margin-bottom: 0;
+  }
+  .project__body {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .project-thumb {
-    width: 100%;
-  }
-  .project-text {
-    width: 100%;
-    text-align: center;
-  }
-  p.portfolio-lead {
-    font-size: 1.2em;
-  }
+    justify-content: space-between;
+    align-items: stretch;
+    width: 32%;
 
-  .infobar {
-    flex-basis: 300px;
-    transition: .27s;
+    align-self: stretch;
   }
-  .infobar-content {
-    width: 300px;
-    transition: .27s;
-    padding: 1.7em;
+  .project__actions {
+    margin: 0;
   }
 }
-
+/*
 @media screen and (max-width: 740px) {
 
 
