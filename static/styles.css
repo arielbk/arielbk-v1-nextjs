@@ -10,6 +10,17 @@
   --medgrey: #8c8c9c;
   --lightgrey: #ccc;
   --lightestgrey: #edeeef;
+
+
+  /* colours for different skill tabs - controlled from js */
+  --skill--javascript: #f4d944;
+  --skill--react: #71bfdb;
+  --skill--sketch: #e59946;
+  --skill--bootstrap: #50457b;
+  --skill--sass: #b7628e;
+  --skill--jquery: #2e6daa;
+  --skill--python: #223c55;
+  --skill--flask: #ffffff;
 }
 
 /* general styles */
@@ -137,10 +148,16 @@ p.portfolio__lead {
 }
 
 .project__date {
+  position: absolute;
+  font-weight: 600;
+  font-size: 2.5rem;
+  right: 0;
+  top: 2rem;
   margin-left: 1em;
-  color: var(--medgrey);
+  color: var(--lightgrey);
   width: 100%;
   text-align: right;
+  z-index: -1;
 }
 
 .project__thumb {
@@ -158,20 +175,26 @@ p.portfolio__lead {
   width: 100%;
 }
 
-.project__skill {
-  padding: .6rem;
-  display: inline-block;
-  width: 120px;
-  background: var(--black);
-  color: var(--lightestgrey);
-  border-radius: 0 25px 25px 0;
-  margin: .5rem 0;
-}
 .project__skills {
-  top: 10rem;
+  top: 7.5rem;
   width: 120px;
   position: absolute;
   z-index: 999;
+  padding: .5rem 0 2rem;
+  overflow: hidden;
+}
+
+.project__skill {
+  padding: .3rem .6rem;
+  display: inline-block;
+  width: 100px;
+  color: var(--black);
+  border-radius: 0 25px 25px 0;
+  margin: .5rem 0;
+  font-size: .9rem;
+  box-shadow: 0 15px 35px rgba(37, 37, 80, 0.1),
+              0 5px 15px rgba(0,0,0,.06);
+  opacity: .9;
 }
 
 .project__actions {
@@ -216,6 +239,9 @@ a.project__btn:hover {
     width: 62%;
     margin-bottom: 0;
   }
+  .project__date {
+    font-size: 3rem;
+  }
   .project__body {
     display: flex;
     flex-direction: column;
@@ -239,7 +265,7 @@ a.project__btn:hover {
   }
   .infobar__container {
     display: block;
-    text-align: center;
+    /* text-align: center; */
     width: 300px;
     height: auto;
     padding-bottom: 3rem;
@@ -247,10 +273,16 @@ a.project__btn:hover {
     position: relative;
     overflow-y: visible;
   }
+  .infobar__caption {
+    text-align: center;
+  }
   .infobar__biophoto {
     height: 230px;
     width: 230px;
     margin: 0 auto;
+  }
+  .infobar__biotext {
+    text-align: center;
   }
   .infobar__arrow {
     transform: rotate(90deg);
@@ -260,5 +292,9 @@ a.project__btn:hover {
   }
   .portfolio {
     padding: 6rem 2.5em 3rem;
+  }
+  .project__date {
+    font-size: 2rem;
+    top: 2.5rem;
   }
 }
