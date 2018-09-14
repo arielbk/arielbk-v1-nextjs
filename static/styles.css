@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+/* all defaults are for medium screen size (x*y) */
+
+/* variables */
+
+:root {
+  --black: #333;
+  --darkgrey: #4d4d5a;
+  --medgrey: #8c8c9c;
+  --lightgrey: #ccc;
+  --lightestgrey: #edeeef;
+}
+
+/* general styles */
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
 html {
-  background: #edeeef;
+  background: var(--pearl);
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: #333;
+  color: var(--black);
   margin: 0;
   padding: 0;
   background: #fff;
@@ -21,213 +35,230 @@ body {
   display: flex;
 }
 
-.infobar {
-  flex: none;
-  flex-basis: 380px;
-
-  position: relative;
-  background: #4d4d5a;
-  color: #ccc;
-  width: 380px;
+h3, h4 {
+  color: var(--medgrey);
 }
 
-.infobar-content {
+p {
+  margin: 0 0 .6rem 0;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--black);
+}
+
+/* infobar styles */
+
+.infobar {
+  flex: none;
+  flex-basis: 300px;
+
+  width: 300px;
+  position: relative;
+  background: var(--darkgrey);
+  color: var(--lightgrey);
+  transition: .27s;
+}
+
+.infobar__arrow {
+  position: absolute;
+  left: 0;
+  top: 2.6em;
+}
+
+.infobar__container {
   width: 380px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2.2em;
-  padding-bottom: 0;
   overflow-y: auto;
-}
-
-.infobar {
-  flex-basis: 300px;
-  transition: .27s;
-}
-.infobar-content {
   width: 300px;
-  transition: .27s;
   padding: 1.7em;
+  padding-top: 2.2rem;
+  padding-bottom: 0;
+  transition: .27s;
 }
 
-.contact-route {
-  margin: 2em 0;
-  text-align: center;
-}
-
-.contact-route p {
-  margin-top: .5em;
-}
-
-.contact-icon {
-  font-size: 2.5em;
-  color: #8c8c9c;
-  padding: 0 1em;
-}
-.contact-icon:hover {
-  color: #ccc;
-}
-
-.portfolio {
-  padding: 6rem 4.5rem 3rem;
-  max-width: 1200px;
-}
-
-.portfolio header {
-  margin-bottom: 6rem;
-}
-
-.biophoto {
-  display: block;
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  margin: 2em auto;
-  background: #ccc;
-}
-
-h1 {
-  font-size: 2rem;
+.infobar__header {
   margin: 0;
-  margin-top: 1rem;
-}
-
-h3, h4 {
-  color: #8c8c9c;
-}
-
-.infobar h3 {
-  margin-top: .3em;
-}
-
-h3.connect {
-  margin-top: 2em;
-}
-
-.infobar h1 {
-  color: #eee;
+  padding: 0;
+  font-size: 2rem;
+  color: var(--lightestgrey);
   text-decoration: none;
 }
 
-p {
-  margin-bottom: 1.5em;
-  line-height: 1.7;
+.infobar__caption {
+  margin-top: .5rem;
+  margin-bottom: 5rem;
 }
 
-p.portfolio-lead {
-  font-size: 1.6em;
-  color: #8c8c9c;
+.infobar__biophoto {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 3px;
 }
 
-a {
-  color: #333;
+.infobar__biotext {
+  margin: 2rem 0 0 0;
+}
+
+/* portfolio section */
+
+.portfolio {
+  padding: 4.7rem 4rem;
+  max-width: 1200px;
+  position: relative;
+}
+
+.portfolio__title {
+  margin: 0;
+}
+
+p.portfolio__lead {
+  color: var(--medgrey);
+  margin: 1rem 0 4.7rem 0;
 }
 
 .project {
-  margin: 1em 0;
-  padding: 3em 0 4em 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 2px solid #ddd;
+  margin: 2.4rem 0 0 0;
+  padding: 3em 0 0 0;
+  border-top: 2px solid var(--lightestgrey);
+  position: relative;
 }
 
-.skill-tab {
-  font-size: .9em;
-  background: #999;
-  color: #fff;
-  padding: .2em .7em .15em;
-  border-radius: 20px;
-  margin: .5em .1em;
+.project__title {
+  font-size: 1.25rem;
+  color: var(--darkgrey);
+  margin: 0 0 2.4rem 0;
   display: inline-block;
 }
-.skill-tab:hover {
-  background: #333;
-  cursor: pointer;
+
+.project__date {
+  margin-left: 1em;
+  color: var(--medgrey);
+  width: 100%;
+  text-align: right;
 }
 
-.project-thumb {
-  width: 54%;
-  flex-basis: 20%;
+.project__thumb {
+  width: 100%;
+  margin-bottom: 2.6rem;
+  border-radius: 3px;
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
-}
-.project-text {
-  width: 40%;
-  padding: 1rem;
-  background: #fff;
+  filter: grayscale(1);
+  opacity: .6;
 }
 
-.project-options {
-  margin: 4em 0; 
+.project__body {
+  width: 100%;
 }
-.project-options a {
-  background: #8c8c9c;
-  padding: 1em 2em;
-  margin-right: 1em;
+
+.project__skill {
+  padding: .6rem;
+  display: inline-block;
+  width: 120px;
+  background: var(--black);
+  color: var(--lightestgrey);
+  border-radius: 0 25px 25px 0;
+  margin: .5rem 0;
+}
+.project__skills {
+  top: 10rem;
+  width: 120px;
+  position: absolute;
+  z-index: 999;
+}
+
+.project__actions {
+  margin: 2.6rem 0 3.8rem 0; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+a.project__btn {
+  background: var(--darkgrey);
+  padding: 1em;
   color: #fff;
   text-decoration: none;
+  width: 47%;
+  text-align: center;
+  border-radius: 3px;
 }
-.project-options a:hover {
-  background: #4d4d5a;
+a.project__btn:hover {
+  background: var(--medgrey);
 }
 
-@media screen and (max-width: 1140px) {
-  .portfolio {
-    padding: 4em;
-  }
+.project__btn .fas {
+  padding: 0 .4rem;
+  color: var(--lightgrey);
+}
+
+
+@media screen and (min-width: 1250px) {
   .portfolio header {
     margin-bottom: 3rem;
   }
   
-  .project {
+  .project__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5.2rem;
+  }
+  .project__thumb {
+    width: 62%;
+    margin-bottom: 0;
+  }
+  .project__body {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .project-thumb {
-    width: 100%;
-  }
-  .project-text {
-    width: 100%;
-    text-align: center;
-  }
-  p.portfolio-lead {
-    font-size: 1.2em;
-  }
+    justify-content: space-between;
+    align-items: stretch;
+    width: 32%;
 
-  .infobar {
-    flex-basis: 300px;
-    transition: .27s;
+    align-self: stretch;
   }
-  .infobar-content {
-    width: 300px;
-    transition: .27s;
-    padding: 1.7em;
+  .project__actions {
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 740px) {
-
-
   .content {
     display: block;
   }
   .infobar {
     width: 100%;
   }
-  .infobar-content {
+  .infobar__container {
     display: block;
     text-align: center;
-    width: 100%;
+    width: 300px;
     height: auto;
+    padding-bottom: 3rem;
+    margin: 0 auto;
     position: relative;
     overflow-y: visible;
   }
+  .infobar__biophoto {
+    height: 230px;
+    width: 230px;
+    margin: 0 auto;
+  }
+  .infobar__arrow {
+    transform: rotate(90deg);
+    top: -24px;
+    left: 50%;
+    margin-left: -22px;
+  }
   .portfolio {
-    padding: 3em 2.5em;
+    padding: 6rem 2.5em 3rem;
   }
 }

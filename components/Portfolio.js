@@ -21,7 +21,7 @@ const projects = [
       "It was an eye-opener to design the interface beforehand and I think it paid off."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
-    date: 'July',
+    date: 'July 2018',
     repo: 'https://github.com/arielbk/pomodoro-timer',
     demo: 'https://arielbk.com/pomodorotimer'
   },
@@ -33,7 +33,7 @@ const projects = [
       "This gave me some insight into developing a project with the end user in mind."
     ],
     skills: ['Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
-    date: 'July',
+    date: 'May 2018',
     repo: 'https://github.com/arielbk/portfolio-marija',
     demo: 'https://marijap.com/'
   },
@@ -44,7 +44,7 @@ const projects = [
       "This was great practice for fetching data with a simple frontend."
     ],
     skills: ['JavaScript', 'React'],
-    date: 'July',
+    date: 'June 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/date-facts-react',
     demo: 'http://arielbk.com/date-facts/'
   },
@@ -55,7 +55,7 @@ const projects = [
       "Although I originally wrote this as an exercise in modern JavaScript, it was rewritten in React.",
       "Migrating an app, even a simple one like this, is a great learning experience."],
     skills: ['JavaScript', 'React'],
-    date: 'July',
+    date: 'June 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/word-counter-react',
     demo: 'https://arielbk.com/word-counter-react/'
   },
@@ -67,7 +67,7 @@ const projects = [
       "An open project to bring together twelve weeks of valuable study."
     ],
     skills: ['Python', 'Flask', 'JavaScript'],
-    date: 'July',
+    date: 'May 2018',
     repo: 'https://github.com/arielbk/kalender-heroku',
     demo: 'https://kalender-deploy.herokuapp.com/',
   }
@@ -75,9 +75,12 @@ const projects = [
 
 export default () => (
   <section className="portfolio">
+    <svg className="infobar__arrow" width="40" height="87" viewBox="0 0 40 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#4D4D5A"/>
+    </svg>
     <header>
-        <h1>Projects</h1>
-        <p className="portfolio-lead">
+        <h1 className="portfolio__title">My projects</h1>
+        <p className="portfolio__lead">
           A selection of coding projects, with the more recent at the top.
         </p>
     </header>
