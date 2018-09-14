@@ -33,7 +33,7 @@ const projects = [
       "This gave me some insight into developing a project with the end user in mind."
     ],
     skills: ['Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
-    date: 'May 2018',
+    date: 'June 2018',
     repo: 'https://github.com/arielbk/portfolio-marija',
     demo: 'https://marijap.com/'
   },
@@ -55,7 +55,7 @@ const projects = [
       "Although I originally wrote this as an exercise in modern JavaScript, it was rewritten in React.",
       "Migrating an app, even a simple one like this, is a great learning experience."],
     skills: ['JavaScript', 'React'],
-    date: 'June 2018',
+    date: 'May 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/word-counter-react',
     demo: 'https://arielbk.com/word-counter-react/'
   },
