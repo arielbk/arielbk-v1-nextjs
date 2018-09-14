@@ -150,7 +150,8 @@ p.portfolio__lead {
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
-  filter: grayscale(0.5);
+  filter: grayscale(1);
+  opacity: .6;
 }
 
 .project__body {
@@ -228,25 +229,36 @@ a.project__btn:hover {
     margin: 0;
   }
 }
-/*
+
 @media screen and (max-width: 740px) {
-
-
   .content {
     display: block;
   }
   .infobar {
     width: 100%;
   }
-  .infobar-content {
+  .infobar__container {
     display: block;
     text-align: center;
-    width: 100%;
+    width: 300px;
     height: auto;
+    padding-bottom: 3rem;
+    margin: 0 auto;
     position: relative;
     overflow-y: visible;
   }
-  .portfolio {
-    padding: 3em 2.5em;
+  .infobar__biophoto {
+    height: 230px;
+    width: 230px;
+    margin: 0 auto;
   }
-} */
+  .infobar__arrow {
+    transform: rotate(90deg);
+    top: -24px;
+    left: 50%;
+    margin-left: -22px;
+  }
+  .portfolio {
+    padding: 6rem 2.5em 3rem;
+  }
+}
