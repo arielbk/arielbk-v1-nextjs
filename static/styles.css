@@ -13,11 +13,13 @@
 
 
   /* colours for different skill tabs - controlled from js */
+  --skill--html: #ec6433;
+  --skill--css: #3c9ad6;
   --skill--javascript: #f4d944;
   --skill--react: #71bfdb;
   --skill--sketch: #e59946;
   --skill--bootstrap: #50457b;
-  --skill--sass: #b7628e;
+  --skill--sass: #b25786;
   --skill--jquery: #2e6daa;
   --skill--python: #223c55;
   --skill--flask: #ffffff;
@@ -114,6 +116,7 @@ a {
 
 .infobar__biotext {
   margin: 2rem 0 0 0;
+  color: var(--lightgrey);
 }
 
 /* portfolio section */
@@ -140,24 +143,26 @@ p.portfolio__lead {
   position: relative;
 }
 
+/* .project__markers {
+  display: inline;
+  margin: 0;
+  padding: 0;
+} */
+
 .project__title {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   color: var(--darkgrey);
-  margin: 0 0 2.4rem 0;
+  margin: 0 0 1.5rem 0;
   display: inline-block;
 }
 
 .project__date {
-  position: absolute;
-  font-weight: 600;
-  font-size: 2.5rem;
-  right: 0;
-  top: 2rem;
-  margin-left: 1em;
-  color: var(--lightgrey);
+  display: inline-block;
   width: 100%;
-  text-align: right;
-  z-index: -1;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--lightgrey);
 }
 
 .project__thumb {
@@ -176,8 +181,8 @@ p.portfolio__lead {
 }
 
 .project__skills {
-  top: 7.5rem;
-  width: 120px;
+  top: 6.75rem;
+  width: 105px;
   position: absolute;
   z-index: 999;
   padding: .5rem 0 2rem;
@@ -185,16 +190,17 @@ p.portfolio__lead {
 }
 
 .project__skill {
-  padding: .3rem .6rem;
+  padding: .4rem .6rem;
   display: inline-block;
-  width: 100px;
+  width: 100%;
   color: var(--black);
   border-radius: 0 25px 25px 0;
-  margin: .5rem 0;
+  margin: .2rem 0;
   font-size: .9rem;
   box-shadow: 0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
   opacity: .9;
+  font-weight: bold;
 }
 
 .project__actions {
@@ -228,19 +234,19 @@ a.project__btn:hover {
     margin-bottom: 3rem;
   }
   
-  .project__flex {
+  .project {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 5.2rem;
   }
-  .project__thumb {
+  .project__markers {
     width: 62%;
-    margin-bottom: 0;
+    margin: 0;
   }
-  .project__date {
-    font-size: 3rem;
+  .project__thumb {
+    margin-bottom: 0;
   }
   .project__body {
     display: flex;
@@ -256,7 +262,7 @@ a.project__btn:hover {
   }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 840px) {
   .content {
     display: block;
   }
@@ -293,8 +299,9 @@ a.project__btn:hover {
   .portfolio {
     padding: 6rem 2.5em 3rem;
   }
-  .project__date {
-    font-size: 2rem;
-    top: 2.5rem;
+  .project__skill {
+    margin-bottom: .05rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
   }
 }
