@@ -143,16 +143,10 @@ p.portfolio__lead {
   position: relative;
 }
 
-/* .project__markers {
-  display: inline;
-  margin: 0;
-  padding: 0;
-} */
-
 .project__title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--darkgrey);
-  margin: 0 0 1.5rem 0;
+  margin: .2rem 0 1.5rem 0;
   display: inline-block;
 }
 
