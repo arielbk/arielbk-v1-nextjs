@@ -11,7 +11,7 @@ export default () => (
 
     {/* <!-- BIO SECTION --> */}
     <section className="infobar__biotext">
-        <p>I love to code, mostly in JavaScript, and I'm looking for a team to do this with and learn.</p>
+        <p>I love to code websites and apps. I’m starting out and determined to keep on learning.</p>
     </section>
     
     {/* <!-- CONTACT SECTION goes here... --> */}
