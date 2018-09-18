@@ -32,7 +32,7 @@
 }
 
 html {
-  background: var(--pearl);
+  background: var(--lightestgrey);
 }
 
 body {
@@ -68,13 +68,19 @@ a {
   flex-basis: 300px;
 
   width: 300px;
-  position: relative;
   background: var(--darkgrey);
   color: var(--lightgrey);
   transition: .27s;
 }
 
 .infobar__arrow {
+  position: absolute;
+  transform: rotate(180deg);
+  right: -1.7rem;
+  top: -30px;
+}
+
+.portfolio__arrow {
   position: absolute;
   left: 0;
   top: 2.6em;
@@ -117,6 +123,25 @@ a {
 .infobar__biotext {
   margin: 2rem 0 0 0;
   color: var(--lightgrey);
+}
+
+.infobar__biotext p {
+  line-height: 1.5;
+}
+
+.infobar__contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 3rem 0 0 0;
+  position: relative;
+}
+.infobar__contact a {
+  color: var(--lightgrey);
+}
+.infobar__contact a:hover {
+  color: var(--lightestgrey);
 }
 
 /* portfolio section */
@@ -285,6 +310,9 @@ a.project__btn:hover {
     text-align: center;
   }
   .infobar__arrow {
+    display: none;
+  }
+  .portfolio__arrow {
     transform: rotate(90deg);
     top: -24px;
     left: 50%;
