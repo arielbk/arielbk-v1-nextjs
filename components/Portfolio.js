@@ -1,5 +1,7 @@
 import Project from './Project';
+import styled from 'styled-components';
 
+// maybe this should be based on an API call - mongoose and mlab?
 const projects = [
   {
     name: 'Lucid',
@@ -74,19 +76,40 @@ const projects = [
 ];
 
 export default () => (
-  <section className="portfolio">
-    <svg className="portfolio__arrow" width="40" height="87" viewBox="0 0 40 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#4D4D5A"/>
-    </svg>
+  <Portfolio>
+    <Arrow width="40" height="87" viewBox="0 0 40 87">
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#4D4D5A" />
+    </Arrow>
     <header>
-        <h1 className="portfolio__title">My projects</h1>
-        <p className="portfolio__lead">
+        <Title>My projects</Title>
+        <Lead>
           A selection of coding projects, with the more recent at the top.
-        </p>
+        </Lead>
     </header>
 
     {projects.map(project => (
       <Project {...project} key={project.name} />
     ))}
-  </section>
-)
+  </Portfolio>
+);
+
+const Portfolio = styled.div`
+  padding: 4.7rem 4rem;
+  max-width: 1200px;
+  position: relative;
+`;
+
+const Arrow = styled.svg`
+  position: absolute;
+  left: 0;
+  top: 2.6em;
+`;
+
+const Title = styled.h1`
+  margin: 0;
+`;
+
+const Lead = styled.p`
+  color: var(--medgrey);
+  margin: 1rem 0 4.7rem 0;
+`;

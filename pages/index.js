@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Biobar from '../components/Infobar';
+import Infobar from '../components/Infobar';
 import Portfolio from '../components/Portfolio';
 
 export default () => (
@@ -10,7 +10,7 @@ export default () => (
       <link rel="stylesheet" href="static/styles.css" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
-    <Biobar />
+    <Infobar />
     <Portfolio />
 
   </div>

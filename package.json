@@ -18,8 +18,10 @@
     "url": "https://github.com/arielbk/arielbk/issues"
   },
   "dependencies": {
-    "next": "^6.1.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "next": "^7.0.2",
+    "node-sass": "^4.9.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^4.0.0"
   }
 }
