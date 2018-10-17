@@ -34,6 +34,10 @@ const Infobar = styled.div`
   background: var(--darkgrey);
   color: var(--lightgrey);
   transition: .27s;
+
+  @media screen and (max-width: 840px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -48,6 +52,16 @@ const Container = styled.div`
   padding-top: 2.2rem;
   padding-bottom: 0;
   transition: .27s;
+
+  @media screen and (max-width: 840px) {
+    display: block;
+    width: 300px;
+    height: auto;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: visible;
+  }
 `;
 
 const Title = styled.h1`
@@ -61,6 +75,10 @@ const Title = styled.h1`
 const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 5rem;
+
+  @media screen and (max-width: 840px) {
+    text-align: center;
+  }
 `;
 
 const Biophoto = styled.img`
@@ -68,14 +86,23 @@ const Biophoto = styled.img`
   width: 100%;
   margin: 0;
   border-radius: 3px;
+
+  @media screen and (max-width: 840px) {
+    height: 230px;
+    width: 230px;
+    margin: 0 auto;
+  }
 `;
 
 const Biotext = styled.div`
   margin: 2rem 0 0 0;
   color: var(--lightgrey);
-
   p {
     line-height: 1.5;
+  }
+
+  @media screen and (max-width: 840px) {
+    text-align: center;
   }
 `;
 

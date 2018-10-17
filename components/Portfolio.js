@@ -97,12 +97,27 @@ const Portfolio = styled.div`
   padding: 4.7rem 4rem;
   max-width: 1200px;
   position: relative;
+
+  @media screen and (min-width: 1250px) {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 840px) {
+    padding: 6rem 2.5em 3rem;
+  }
 `;
 
 const Arrow = styled.svg`
   position: absolute;
   left: 0;
   top: 2.6em;
+
+  @media screen and (max-width: 840px) {
+    transform: rotate(90deg);
+    top: -24px;
+    left: 50%;
+    margin-left: -22px;
+  }
 `;
 
 const Title = styled.h1`

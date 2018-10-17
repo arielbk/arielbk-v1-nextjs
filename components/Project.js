@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 export default class extends React.Component {
   render() {
     return (
@@ -36,6 +35,14 @@ const StyledProject = styled.div`
   padding: 3em 0 0 0;
   border-top: 2px solid var(--lightestgrey);
   position: relative;
+
+  @media screen and (min-width: 1250px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5.2rem;
+  }
 `;
 
 const Skills = styled.div`
@@ -63,10 +70,19 @@ const Skill = styled.span`
               0 5px 15px rgba(0,0,0,.06);
   opacity: .9;
   font-weight: bold;
+
+  @media screen and (max-width: 840px) {
+    margin-bottom: .05rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+  }
 `;
 
 const Markers = styled.div`
-  // just media queries will go here...
+  @media screen and (min-width: 1250px) {
+    width: 62%;
+    margin: 0;
+  }
 `;
 
 const Date = styled.div`
@@ -87,10 +103,24 @@ const Thumb = styled.img`
               0 5px 15px rgba(0,0,0,.06);
   filter: grayscale(1);
   opacity: .6;
+
+  @media screen and (min-width: 1250px) {
+    margin-bottom: 0;
+  }
 `;
 
 const Body = styled.div`
   width: 100%;
+
+  @media screen and (min-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 32%;
+
+    align-self: stretch;
+  }
 `;
 
 const Title = styled.h3`
@@ -105,6 +135,10 @@ const Actions = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (min-width: 1250px) {
+    margin: 0;
+  }
 `;
 
 // maybe make this an actual button?
