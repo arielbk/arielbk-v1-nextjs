@@ -44,9 +44,9 @@ body {
   background: #fff;
 }
 
-.content {
+/* .content {
   display: flex;
-}
+} */
 
 h3, h4 {
   color: var(--medgrey);

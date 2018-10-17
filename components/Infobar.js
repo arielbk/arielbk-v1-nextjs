@@ -20,7 +20,7 @@ export default () => (
     <Contact>
       <a href="mailto:buchwald.kearney@gmail.com">Email</a>
       <a href="https://github.com/arielbk">GitHub</a>
-      <a href="https://codepen.com/arielbk">Codepen</a>
+      <a href="https://codepen.io/arielbk">Codepen</a>
     </Contact>
     </Container>
   </Infobar>

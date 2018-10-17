@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ifError } from 'assert'; // why did I even put this here??
-
 
 export default class extends React.Component {
   render() {
@@ -10,13 +8,9 @@ export default class extends React.Component {
     <StyledProject>
         <Skills>
           {this.props.skills.length &&
-          this.props.skills.map(skill => {
-            let style = { background: `var(--skill--${skill.toLowerCase()})` };
-            // I would have used the .includes() method here, but its not supported by IE... this is an alt.
-            const dark = (['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].indexOf(skill) >= 0);
-            if (dark) style.color = '#fff';
-            return (<Skill skill={skill} key={skill}>{skill}</Skill>)
-          })}
+          this.props.skills.map(skill => (
+            <Skill skill={skill} key={skill}>{skill}</Skill>
+          ))}
         </Skills>
         <Markers>
           <Date>{this.props.date}</Date>
@@ -57,7 +51,7 @@ const Skill = styled.span`
   background: var(--skill--${props => props.skill.toLowerCase()});
   color: ${props =>
     ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
-      ? '#fff'
+      ? '#fff;'
       : 'var(--black);'}
   padding: .4rem .6rem;
   display: inline-block;
