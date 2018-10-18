@@ -5,6 +5,7 @@ export default class extends React.Component {
   render() {
     return (
       <StyledProject dark={this.props.dark}>
+        <Container>
         <Date>{this.props.date}</Date>
         
         <Skills>
@@ -30,15 +31,28 @@ export default class extends React.Component {
             <Button href={this.props.demo}>Demo <i className="fas fa-external-link-alt"></i></Button>
           </Actions>
         </Body>
-
-    </StyledProject>
+        
+        </Container>
+      </StyledProject>
   )}
 };
 
 const StyledProject = styled.div`
   background: ${props => props.dark ? '#272727;' : '#333;'}
   margin: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 850px) {
+    width: calc(100vw - 300px);
+  }
+`;
+
+const Container = styled.div`
   padding: 4rem;
+  max-width: 1200px;
   position: relative;
 
   @media screen and (min-width: 1250px) {
@@ -50,7 +64,7 @@ const StyledProject = styled.div`
 `;
 
 const Skills = styled.div`
-  display: none;
+  // display: none;
 
   top: 12rem;
   width: 105px;
@@ -58,6 +72,10 @@ const Skills = styled.div`
   z-index: 999;
   padding: .5rem 0 2rem;
   overflow: hidden;
+
+  @media screen and (min-width: 1250px) {
+    top: 5rem;
+  }
 `;
 
 const Skill = styled.span`
@@ -85,15 +103,16 @@ const Skill = styled.span`
 `;
 
 const Date = styled.div`
+
   z-index: 0;
   position: absolute;
-  right: 0;
-  top: 2rem;
+  right: 1rem;
+  top: 1.5rem;
   display: inline-block;
   width: 100%;
   margin: 0;
   margin-bottom: 1.5rem;
-  font-size: 4.5rem;
+  font-size: 2rem;
   color: #4D4D5A;
   text-align: right;
 `;
@@ -137,7 +156,7 @@ const Body = styled.div`
 const Text = styled.div`
   width: 62%;
   margin-right: 1rem;
-  color: #e5e5e5;
+  color: var(--medgrey);
 
   @media screen and (min-width: 1250px) {
     width: 100%;
@@ -146,8 +165,9 @@ const Text = styled.div`
 
 const TopTitle = styled.h3`
   z-index: 2;
-  font-size: 2.2rem;
-  color: #f8f8f8;
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--lightestgrey);
   margin: .2rem 0 3.5rem 0;
   display: inline-block;
 
@@ -156,13 +176,13 @@ const TopTitle = styled.h3`
   }
 `;
 
-const BottomTitle = styled.h3`
+const BottomTitle = styled.h3`z
   z-index: 2;
-  font-size: 2.2rem;
-  color: #f8f8f8;
-  margin: .2rem 0 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--lightestgrey);
+  margin: 0rem 0 1.5rem 0;
   display: inline-block;
-  padding-left: 1.5rem;
 
   @media screen and (max-width: 1250px) {
     display: none;
@@ -199,7 +219,7 @@ const Button = styled.a`
   }
 
   @media screen and (min-width: 1250px) {
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     width: 45%;
   }
 `;

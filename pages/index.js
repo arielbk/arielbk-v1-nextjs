@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: #333;
+    background-image: linear-gradient(120deg, #333, #282828);
   }
 
   h3, h4 {
@@ -71,7 +72,7 @@ export default () => (
     <Head>
       <title>arielbk portfolio</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <GlobalStyle />

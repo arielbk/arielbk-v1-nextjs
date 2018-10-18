@@ -13,7 +13,9 @@ export default () => (
 
     {/* <!-- BIO SECTION --> */}
     <Biotext>
-      <p>I love to code websites and apps, currently focusing on React world. Constantly learning.</p>
+      <p>I like making websites and apps. <br />
+      Mostly focused on frontend and the React ecosystem. <br/>
+      Constantly learning.</p>
     </Biotext>
     
     {/* <!-- CONTACT SECTION goes here... --> */}
@@ -31,7 +33,7 @@ const Infobar = styled.div`
   flex-basis: 300px;
 
   width: 300px;
-  background: #434343;
+  background: #434347;
   color: var(--lightgrey);
   transition: .27s;
 
@@ -68,6 +70,7 @@ const Title = styled.h1`
   margin: 0;
   padding: 0;
   font-size: 2rem;
+  font-weight: 200;
   color: var(--lightestgrey);
   text-decoration: none;
 `;
@@ -75,6 +78,7 @@ const Title = styled.h1`
 const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 5rem;
+  color: var(--medgrey);
 
   @media screen and (max-width: 840px) {
     text-align: center;
@@ -99,6 +103,7 @@ const Biotext = styled.div`
   color: var(--lightgrey);
   p {
     line-height: 1.5;
+    font-size: .9rem;
   }
 
   @media screen and (max-width: 840px) {
@@ -108,7 +113,7 @@ const Biotext = styled.div`
 
 const Contact = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   margin: 3rem 0 0 0;

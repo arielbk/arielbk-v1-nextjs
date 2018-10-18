@@ -10,7 +10,7 @@ const projects = [
       "This was a project that I undertook as part of a 'Chingu Cohort', a community coding project.",
       "This project is currently a proof-of-concept — a fully functional frontend-only app."
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Sketch'],
+    skills: ['JavaScript', 'React', 'Sketch'],
     date: 'August 2018',
     repo: 'https://github.com/chingu-voyage6/Geckos-Team-03/tree/master',
     demo: 'https://arielbk.com/lucid/'
@@ -22,7 +22,7 @@ const projects = [
       "My first full-fledged React app: a Pomodoro timer to track your work periods.",
       "It was an eye-opener to design the interface beforehand and I think it paid off."
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Sketch'],
+    skills: ['JavaScript', 'React', 'Sketch'],
     date: 'July 2018',
     repo: 'https://github.com/arielbk/pomodoro-timer',
     demo: 'https://arielbk.com/pomodorotimer'
@@ -34,7 +34,7 @@ const projects = [
       "A design/coding collaboration for the UX designer Marija Peraic's portfolio.",
       "This gave me some insight into developing a project with the end user in mind."
     ],
-    skills: ['HTML', 'CSS', 'Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
+    skills: ['Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
     date: 'June 2018',
     repo: 'https://github.com/arielbk/portfolio-marija',
     demo: 'https://marijap.com/'
@@ -45,7 +45,7 @@ const projects = [
     blurb: ["Shows facts for any date based on data from the 'Number Facts' API.",
       "This was great practice for fetching data with a simple frontend."
     ],
-    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    skills: ['JavaScript', 'React'],
     date: 'June 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/date-facts-react',
     demo: 'http://arielbk.com/date-facts/'
@@ -56,7 +56,7 @@ const projects = [
     blurb: [
       "Although I originally wrote this as an exercise in modern JavaScript, it was rewritten in React.",
       "Migrating an app, even a simple one like this, is a great learning experience."],
-    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    skills: ['JavaScript', 'React'],
     date: 'May 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/word-counter-react',
     demo: 'https://arielbk.com/word-counter-react/'
@@ -68,7 +68,7 @@ const projects = [
       "Final showcase for an online computer science course, Harvard's CS50X.",
       "An open project to bring together twelve weeks of valuable study."
     ],
-    skills: ['HTML', 'CSS', 'Python', 'Flask', 'JavaScript'],
+    skills: ['Python', 'Flask', 'JavaScript'],
     date: 'May 2018',
     repo: 'https://github.com/arielbk/kalender-heroku',
     demo: 'https://kalender-deploy.herokuapp.com/',
@@ -78,7 +78,7 @@ const projects = [
 export default () => (
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#434343" />
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#434347" />
     </Arrow>
     <header>
         <Title>My projects</Title>
@@ -92,17 +92,18 @@ export default () => (
     ))}
 
     <footer>
-      <Title>Get in touch!</Title>
-      <Lead>
-        The best way is to send me an <a href="mailto:buchwald.kearney@gmail.com">email</a>!
-      </Lead>
+      <div>
+        <Title>Get in touch!</Title>
+        <Lead>
+          The best way is to send me an <a href="mailto:buchwald.kearney@gmail.com">email</a>
+        </Lead>
+      </div>
     </footer>
   </Portfolio>
 );
 
 const Portfolio = styled.div`
-  padding: 4.7rem 0;
-  max-width: 1200px;
+  padding: 4.2rem 0 0;
   position: relative;
 
   header, footer {
@@ -110,9 +111,16 @@ const Portfolio = styled.div`
   }
 
   footer {
-    padding: 4.7rem 0;
-    margin: 3.7rem 0;
-    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      text-align: center;
+    }
   }
 
   @media screen and (max-width: 840px) {
@@ -135,7 +143,9 @@ const Arrow = styled.svg`
 
 const Title = styled.h1`
   margin: 0;
-  color: #A5A5FF;
+  color: #ABABE3;
+  font-weight: 200;
+  font-size: 2.2rem;
 `;
 
 const Lead = styled.p`
