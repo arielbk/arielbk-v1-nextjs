@@ -31,7 +31,7 @@ const Infobar = styled.div`
   flex-basis: 300px;
 
   width: 300px;
-  background: var(--darkgrey);
+  background: #434343;
   color: var(--lightgrey);
   transition: .27s;
 
@@ -115,7 +115,7 @@ const Contact = styled.div`
   position: relative;
 
   a {
-    color: var(--lightgrey);
+    color: #A5A5FF;
   }
   a:hover {
     color: var(--lightestgrey);

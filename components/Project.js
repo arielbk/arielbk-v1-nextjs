@@ -4,49 +4,55 @@ import styled from 'styled-components';
 export default class extends React.Component {
   render() {
     return (
-    <StyledProject>
+      <StyledProject dark={this.props.dark}>
+        <Date>{this.props.date}</Date>
+        
         <Skills>
           {this.props.skills.length &&
           this.props.skills.map(skill => (
             <Skill skill={skill} key={skill}>{skill}</Skill>
           ))}
         </Skills>
-        <Markers>
-          <Date>{this.props.date}</Date>
-          <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
-        </Markers>
+        
+        <TopTitle>{this.props.name}</TopTitle>
+        <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
+        
         <Body>
-          <div>
-            <Title>{this.props.name}</Title>
+          
+          <BottomTitle>{this.props.name}</BottomTitle>
+          
+          <Text>
               {this.props.blurb.map((para, i) => (<p key={i}>{para}</p>))}
-          </div>
+          </Text>
 
           <Actions>
             <Button href={this.props.repo}>Code <i className="fas fa-external-link-alt"></i></Button>
             <Button href={this.props.demo}>Demo <i className="fas fa-external-link-alt"></i></Button>
           </Actions>
         </Body>
+
     </StyledProject>
   )}
 };
 
 const StyledProject = styled.div`
-  margin: 2.4rem 0 0 0;
-  padding: 3em 0 0 0;
-  border-top: 2px solid var(--lightestgrey);
+  background: ${props => props.dark ? '#272727;' : '#333;'}
+  margin: 0;
+  padding: 4rem;
   position: relative;
 
   @media screen and (min-width: 1250px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 5.2rem;
+    align-items: center;
   }
 `;
 
 const Skills = styled.div`
-  top: 6.75rem;
+  display: none;
+
+  top: 12rem;
   width: 105px;
   position: absolute;
   z-index: 999;
@@ -78,76 +84,108 @@ const Skill = styled.span`
   }
 `;
 
-const Markers = styled.div`
-  @media screen and (min-width: 1250px) {
-    width: 62%;
-    margin: 0;
-  }
-`;
-
 const Date = styled.div`
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 2rem;
   display: inline-block;
   width: 100%;
   margin: 0;
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--lightgrey);
+  font-size: 4.5rem;
+  color: #4D4D5A;
+  text-align: right;
 `;
 
 const Thumb = styled.img`
+  z-index: 2;
   width: 100%;
   margin-bottom: 2.6rem;
   border-radius: 3px;
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
-  filter: grayscale(1);
-  opacity: .6;
+  // filter: grayscale(1);
+  // opacity: .6;
 
   @media screen and (min-width: 1250px) {
     margin-bottom: 0;
+    width: 53%;
   }
 `;
 
 const Body = styled.div`
   width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
   @media screen and (min-width: 1250px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    width: 32%;
+    width: 42%;
+    margin: 0;
 
     align-self: stretch;
   }
 `;
 
-const Title = styled.h3`
-  font-size: 1.4rem;
-  color: var(--darkgrey);
+const Text = styled.div`
+  width: 62%;
+  margin-right: 1rem;
+  color: #e5e5e5;
+
+  @media screen and (min-width: 1250px) {
+    width: 100%;
+  }
+`;
+
+const TopTitle = styled.h3`
+  z-index: 2;
+  font-size: 2.2rem;
+  color: #f8f8f8;
+  margin: .2rem 0 3.5rem 0;
+  display: inline-block;
+
+  @media screen and (min-width: 1250px) {
+    display: none;
+  }
+`;
+
+const BottomTitle = styled.h3`
+  z-index: 2;
+  font-size: 2.2rem;
+  color: #f8f8f8;
   margin: .2rem 0 1.5rem 0;
   display: inline-block;
+  padding-left: 1.5rem;
+
+  @media screen and (max-width: 1250px) {
+    display: none;
+  }
 `;
 
 const Actions = styled.div`
-  margin: 2.6rem 0 3.8rem 0; 
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
   @media screen and (min-width: 1250px) {
+    display: flex;
+    justify-content: space-between;
     margin: 0;
   }
 `;
 
 // maybe make this an actual button?
 const Button = styled.a`
+  margin-bottom: 1rem;
+  display: inline-block;
   background: var(--darkgrey);
   padding: 1em;
   color: #fff;
   text-decoration: none;
-  width: 47%;
+  width: 100%;
   text-align: center;
   border-radius: 3px;
 
@@ -158,5 +196,10 @@ const Button = styled.a`
   .fas {
     padding: 0 .4rem;
     color: var(--lightgrey);
+  }
+
+  @media screen and (min-width: 1250px) {
+    margin: 1rem 0;
+    width: 45%;
   }
 `;

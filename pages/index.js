@@ -14,7 +14,7 @@ const Content = styled.div`
 const GlobalStyle = createGlobalStyle`
   :root {
     --black: #333;
-    --darkgrey: #4d4d5a;
+    --darkgrey: #4d4d5b;
     --medgrey: #8c8c9c;
     --lightgrey: #ccc;
     --lightestgrey: #edeeef;
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--black);
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: #333;
   }
 
   h3, h4 {
@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: var(--black);
+    color: #A5A5FF;
   }
 `;
 
@@ -71,7 +71,7 @@ export default () => (
     <Head>
       <title>arielbk portfolio</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
-      {/* <link rel="stylesheet" href="/static/styles.css" /> */}
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <GlobalStyle />

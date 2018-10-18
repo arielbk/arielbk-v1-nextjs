@@ -78,7 +78,7 @@ const projects = [
 export default () => (
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#4D4D5A" />
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#434343" />
     </Arrow>
     <header>
         <Title>My projects</Title>
@@ -87,23 +87,36 @@ export default () => (
         </Lead>
     </header>
 
-    {projects.map(project => (
-      <Project {...project} key={project.name} />
+    {projects.map((project, index) => (
+      <Project {...project} key={project.name} dark={(index%2 === 0)} />
     ))}
+
+    <footer>
+      <Title>Get in touch!</Title>
+      <Lead>
+        The best way is to send me an <a href="mailto:buchwald.kearney@gmail.com">email</a>!
+      </Lead>
+    </footer>
   </Portfolio>
 );
 
 const Portfolio = styled.div`
-  padding: 4.7rem 4rem;
+  padding: 4.7rem 0;
   max-width: 1200px;
   position: relative;
 
-  @media screen and (min-width: 1250px) {
-    margin-bottom: 3rem;
+  header, footer {
+    margin: 0 4rem;
+  }
+
+  footer {
+    padding: 4.7rem 0;
+    margin: 3.7rem 0;
+    text-align: center;
   }
 
   @media screen and (max-width: 840px) {
-    padding: 6rem 2.5em 3rem;
+    padding: 6rem 0 2rem;
   }
 `;
 
@@ -122,6 +135,7 @@ const Arrow = styled.svg`
 
 const Title = styled.h1`
   margin: 0;
+  color: #A5A5FF;
 `;
 
 const Lead = styled.p`
