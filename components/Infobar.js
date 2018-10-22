@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { colors } from '../components/variables';
 
 export default () => (
+  <ThemeProvider theme={colors}>
   <Infobar>
     <Container>
     {/* HEADER SECTION */}
@@ -24,6 +26,7 @@ export default () => (
     </Contact>
     </Container>
   </Infobar>
+  </ThemeProvider>
 )
 
 const Infobar = styled.div`
@@ -32,7 +35,7 @@ const Infobar = styled.div`
 
   width: 300px;
   background: #45484C;
-  color: var(--lightgrey);
+  color: ${props => props.theme.lightgrey};
   transition: .27s;
 
   @media screen and (max-width: 840px) {
@@ -76,7 +79,6 @@ const Title = styled.h1`
 const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 3rem;
-  // color: var(--medgrey);
   font-weight: 200;
 
   @media screen and (max-width: 840px) {
@@ -99,7 +101,6 @@ const Biophoto = styled.img`
 
 const Biotext = styled.div`
   margin: 2rem 0 0 0;
-  color: var(--lightgrey);
   p {
     line-height: 1.5;
     font-size: 1rem;
@@ -117,13 +118,5 @@ const Contact = styled.div`
 
   margin: 3rem 0 2rem 0;
   position: relative;
-
-  a {
-    color: #78C1FF;
-
-    &:hover {
-      color: #4495DB;
-    }
-  }
 `;
 

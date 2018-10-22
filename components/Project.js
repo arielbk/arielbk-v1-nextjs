@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-import colors from '../components/variables';
+import styled, { ThemeProvider } from 'styled-components';
+import { colors } from '../components/variables';
 
 export default class extends React.Component {
   render() {
     return (
+      <ThemeProvider theme={colors}>
       <StyledProject dark={this.props.dark}>
         <Container>
         <Date>{this.props.date}</Date>
@@ -35,6 +36,7 @@ export default class extends React.Component {
         
         </Container>
       </StyledProject>
+      </ThemeProvider>
   )}
 };
 
@@ -65,8 +67,6 @@ const Container = styled.div`
 `;
 
 const Skills = styled.div`
-  // display: none;
-
   top: 12rem;
   width: 105px;
   position: absolute;
@@ -80,11 +80,11 @@ const Skills = styled.div`
 `;
 
 const Skill = styled.span`
-  background: ${props => colors.skills[props.skill.toLowerCase()]});
+  background: ${props => props.theme.skills[props.skill.toLowerCase()]};
   color: ${props =>
     ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
       ? '#fff;'
-      : colors.black}
+      : props.theme.black};
   padding: .4rem .6rem;
   display: inline-block;
   width: 100%;
@@ -114,7 +114,7 @@ const Date = styled.div`
   margin: 0;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #545960;
+  color: #656565;
   text-align: right;
 `;
 
@@ -156,7 +156,7 @@ const Body = styled.div`
 const Text = styled.div`
   width: 62%;
   margin-right: 1rem;
-  color: var(--lightgrey);
+  color: ${props => props.theme.lightgrey};
 
   @media screen and (min-width: 1250px) {
     width: 100%;
@@ -201,22 +201,22 @@ const Actions = styled.div`
 const Button = styled.a`
   margin-bottom: 1rem;
   display: inline-block;
-  background: #356288;
+  background: ${props => props.theme.darkgrey};
   padding: 1em;
-  color: #fff;
+  color: ${props => props.theme.lightgrey};
   text-decoration: none;
   width: 100%;
   text-align: center;
   border-radius: 3px;
 
   &:hover {
-    background: #4495DB;
+    background: ${props => props.theme.brightblue};
     color: #fff;
   }
 
   .fas {
     padding: 0 .4rem;
-    color: var(--lightgrey);
+    color: ${props => props.theme.lightgrey};
   }
 
   @media screen and (min-width: 1250px) {

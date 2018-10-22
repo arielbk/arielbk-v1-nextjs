@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Infobar from '../components/Infobar';
 import Portfolio from '../components/Portfolio';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { colors } from '../components/variables';
 
 const Content = styled.div`
@@ -13,26 +13,26 @@ const Content = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    --black: #333;
-    --darkgrey: #404d5b;
-    --medgrey: #8C929C;
-    --lightgrey: #ccc;
-    --lightestgrey: #C9CDD0;
+  // :root {
+  //   --black: #333;
+  //   --darkgrey: #404d5b;
+  //   --medgrey: #8C929C;
+  //   --lightgrey: #ccc;
+  //   --lightestgrey: #C9CDD0;
 
 
-    /* colours for different skill tabs - controlled from js */
-    --skill--html: #ec6433;
-    --skill--css: #3c9ad6;
-    --skill--javascript: #f4d944;
-    --skill--react: #71bfdb;
-    --skill--sketch: #e59946;
-    --skill--bootstrap: #50457b;
-    --skill--sass: #b25786;
-    --skill--jquery: #2e6daa;
-    --skill--python: #223c55;
-    --skill--flask: #ffffff;
-  }
+  //   /* colours for different skill tabs - controlled from js */
+  //   --skill--html: #ec6433;
+  //   --skill--css: #3c9ad6;
+  //   --skill--javascript: #f4d944;
+  //   --skill--react: #71bfdb;
+  //   --skill--sketch: #e59946;
+  //   --skill--bootstrap: #50457b;
+  //   --skill--sass: #b25786;
+  //   --skill--jquery: #2e6daa;
+  //   --skill--python: #223c55;
+  //   --skill--flask: #ffffff;
+  // }
 
   /* general styles */
 
@@ -41,13 +41,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background: ${colors.lightestgrey};
+    background: ${props => props.theme.lightestgrey};
   }
 
   body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: ${colors.black};
+    color: ${props => props.theme.black};
     margin: 0;
     padding: 0;
     background: #333;
@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3, h4 {
-    color: ${colors.medgrey};
+    color: ${props => props.theme.medgrey};
   }
 
   p {
@@ -64,15 +64,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${colors.darkblue};
+    color: ${props => props.theme.brightblue};
 
     &:hover {
-      color: ${colors.lightblue};
+      color: ${props=> props.theme.lightblue};
     }
   }
 `;
 
 export default () => (
+  <ThemeProvider theme={colors}>
   <Content>
     <Head>
       <title>arielbk portfolio</title>
@@ -84,4 +85,5 @@ export default () => (
     <Infobar colors={colors} />
     <Portfolio colors={colors} />
   </Content>
+  </ThemeProvider>
 );

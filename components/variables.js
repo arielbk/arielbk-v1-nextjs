@@ -1,13 +1,12 @@
 const colors = {
-  black: '#ccc',
+  black: '#333',
   darkgrey: '#404d5b',
   medgrey: '#82929c',
   lightgrey: '#ccc',
   almostwhite: '#c9cdd0',
 
-  lightblue: '#4495db',
   brightblue: '#4495db',
-  darkblue: '#78c1ff',
+  lightblue: '#78c1ff',
 
   skills: {
     html: '#ec6433',
