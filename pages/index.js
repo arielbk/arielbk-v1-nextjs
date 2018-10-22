@@ -13,29 +13,6 @@ const Content = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  // :root {
-  //   --black: #333;
-  //   --darkgrey: #404d5b;
-  //   --medgrey: #8C929C;
-  //   --lightgrey: #ccc;
-  //   --lightestgrey: #C9CDD0;
-
-
-  //   /* colours for different skill tabs - controlled from js */
-  //   --skill--html: #ec6433;
-  //   --skill--css: #3c9ad6;
-  //   --skill--javascript: #f4d944;
-  //   --skill--react: #71bfdb;
-  //   --skill--sketch: #e59946;
-  //   --skill--bootstrap: #50457b;
-  //   --skill--sass: #b25786;
-  //   --skill--jquery: #2e6daa;
-  //   --skill--python: #223c55;
-  //   --skill--flask: #ffffff;
-  // }
-
-  /* general styles */
-
   *, *::after, *::before {
     box-sizing: border-box;
   }
@@ -65,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: ${props => props.theme.brightblue};
+    text-decoration: none;
 
     &:hover {
       color: ${props=> props.theme.lightblue};

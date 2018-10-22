@@ -118,5 +118,17 @@ const Contact = styled.div`
 
   margin: 3rem 0 2rem 0;
   position: relative;
+
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+    background: ${props => props.theme.black};
+    border-radius: 3px;
+
+    :hover {
+      background: ${props => props.theme.brightblue};
+      color: #fff;
+    }
+  }
 `;
 

@@ -8,6 +8,7 @@ export default class extends React.Component {
       <ThemeProvider theme={colors}>
       <StyledProject dark={this.props.dark}>
         <Container>
+          <TopTitle><a href={this.props.demo}>{this.props.name}</a></TopTitle>
         <Date>{this.props.date}</Date>
         
         <Skills>
@@ -17,12 +18,11 @@ export default class extends React.Component {
           ))}
         </Skills>
         
-        <TopTitle>{this.props.name}</TopTitle>
         <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
         
         <Body>
           
-          <BottomTitle>{this.props.name}</BottomTitle>
+          <BottomTitle><a href={this.props.demo}>{this.props.name}</a></BottomTitle>
           
           <Text>
               {this.props.blurb.map((para, i) => (<p key={i}>{para}</p>))}
@@ -64,6 +64,10 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (max-width: 500px) {
+    padding: 4rem 1rem;
+  }
 `;
 
 const Skills = styled.div`
@@ -104,19 +108,19 @@ const Skill = styled.span`
 `;
 
 const Date = styled.div`
-
   z-index: 0;
   position: absolute;
-  right: 1.5rem;
-  top: 1rem;
+  right: 2rem;
+  top: 2rem;
   display: inline-block;
   width: 100%;
   margin: 0;
   margin-bottom: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #656565;
   text-align: right;
 `;
+
 
 const Thumb = styled.img`
   z-index: 2;
@@ -134,7 +138,16 @@ const Thumb = styled.img`
   }
 `;
 
+const ThumbOverlay = styled.div`
+  z-index: 100;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background: #000;
+`;
+
 const Body = styled.div`
+  z-index: 2;
   width: 100%;
   margin-top: 1rem;
   display: flex;
@@ -142,14 +155,16 @@ const Body = styled.div`
   justify-content: space-between;
 
   @media screen and (min-width: 1250px) {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    align-self: stretch;
     width: 42%;
     margin: 0;
+  }
 
-    align-self: stretch;
+  @media (max-width: 500px) {
+    flex-direction: column;
   }
 `;
 
@@ -161,6 +176,11 @@ const Text = styled.div`
   @media screen and (min-width: 1250px) {
     width: 100%;
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 
 const TopTitle = styled.h3`
@@ -170,6 +190,14 @@ const TopTitle = styled.h3`
   color: #fff;
   margin: .2rem 0 3.5rem 0;
   display: inline-block;
+
+  a {
+    color: #fff;
+
+    :hover {
+      color: ${props => props.theme.brightblue};
+    }
+  }
 
   @media screen and (min-width: 1250px) {
     display: none;
@@ -183,6 +211,14 @@ const BottomTitle = styled.h3`z
   color: #fff;
   margin: 0rem 0 1.5rem 0;
   display: inline-block;
+
+  a {
+    color: #fff;
+
+    :hover {
+      color: ${props => props.theme.brightblue};
+    }
+  }
 
   @media screen and (max-width: 1250px) {
     display: none;
