@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Infobar from '../components/Infobar';
 import Portfolio from '../components/Portfolio';
 import styled, { createGlobalStyle } from 'styled-components';
+import { colors } from '../components/variables';
 
 const Content = styled.div`
   display: flex;
@@ -14,10 +15,10 @@ const Content = styled.div`
 const GlobalStyle = createGlobalStyle`
   :root {
     --black: #333;
-    --darkgrey: #4d4d5b;
-    --medgrey: #8c8c9c;
+    --darkgrey: #404d5b;
+    --medgrey: #8C929C;
     --lightgrey: #ccc;
-    --lightestgrey: #edeeef;
+    --lightestgrey: #C9CDD0;
 
 
     /* colours for different skill tabs - controlled from js */
@@ -40,13 +41,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background: var(--lightestgrey);
+    background: ${colors.lightestgrey};
   }
 
   body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: var(--black);
+    color: ${colors.black};
     margin: 0;
     padding: 0;
     background: #333;
@@ -54,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3, h4 {
-    color: var(--medgrey);
+    color: ${colors.medgrey};
   }
 
   p {
@@ -63,7 +64,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #A5A5FF;
+    color: ${colors.darkblue};
+
+    &:hover {
+      color: ${colors.lightblue};
+    }
   }
 `;
 
@@ -76,7 +81,7 @@ export default () => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <GlobalStyle />
-    <Infobar />
-    <Portfolio />
+    <Infobar colors={colors} />
+    <Portfolio colors={colors} />
   </Content>
 );

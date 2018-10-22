@@ -13,12 +13,10 @@ export default () => (
 
     {/* <!-- BIO SECTION --> */}
     <Biotext>
-      <p>I like making websites and apps. <br />
-      Mostly focused on frontend and the React ecosystem. <br/>
-      Constantly learning.</p>
+      <p>Currently focused on frontend development and the React ecosystem, I am always learning.</p>
     </Biotext>
     
-    {/* <!-- CONTACT SECTION goes here... --> */}
+    {/* <!-- CONTACT SECTION --> */}
     <Contact>
       <a href="mailto:buchwald.kearney@gmail.com">Email</a>
       <a href="https://github.com/arielbk">GitHub</a>
@@ -33,7 +31,7 @@ const Infobar = styled.div`
   flex-basis: 300px;
 
   width: 300px;
-  background: #434347;
+  background: #45484C;
   color: var(--lightgrey);
   transition: .27s;
 
@@ -70,15 +68,16 @@ const Title = styled.h1`
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  font-weight: 200;
-  color: var(--lightestgrey);
+  font-weight: 700;
+  color: #fff;
   text-decoration: none;
 `;
 
 const Caption = styled.h3`
   margin-top: .5rem;
-  margin-bottom: 5rem;
-  color: var(--medgrey);
+  margin-bottom: 3rem;
+  // color: var(--medgrey);
+  font-weight: 200;
 
   @media screen and (max-width: 840px) {
     text-align: center;
@@ -103,7 +102,7 @@ const Biotext = styled.div`
   color: var(--lightgrey);
   p {
     line-height: 1.5;
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   @media screen and (max-width: 840px) {
@@ -116,14 +115,15 @@ const Contact = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 2rem 0;
   position: relative;
 
   a {
-    color: #A5A5FF;
-  }
-  a:hover {
-    color: var(--lightestgrey);
+    color: #78C1FF;
+
+    &:hover {
+      color: #4495DB;
+    }
   }
 `;
 

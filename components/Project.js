@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import colors from '../components/variables';
 
 export default class extends React.Component {
   render() {
@@ -79,11 +80,11 @@ const Skills = styled.div`
 `;
 
 const Skill = styled.span`
-  background: var(--skill--${props => props.skill.toLowerCase()});
+  background: ${props => colors.skills[props.skill.toLowerCase()]});
   color: ${props =>
     ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
       ? '#fff;'
-      : 'var(--black);'}
+      : colors.black}
   padding: .4rem .6rem;
   display: inline-block;
   width: 100%;
@@ -106,14 +107,14 @@ const Date = styled.div`
 
   z-index: 0;
   position: absolute;
-  right: 1rem;
-  top: 1.5rem;
+  right: 1.5rem;
+  top: 1rem;
   display: inline-block;
   width: 100%;
   margin: 0;
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: #4D4D5A;
+  color: #545960;
   text-align: right;
 `;
 
@@ -125,8 +126,7 @@ const Thumb = styled.img`
   box-shadow: 
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
-  // filter: grayscale(1);
-  // opacity: .6;
+  filter: grayscale(1);
 
   @media screen and (min-width: 1250px) {
     margin-bottom: 0;
@@ -156,7 +156,7 @@ const Body = styled.div`
 const Text = styled.div`
   width: 62%;
   margin-right: 1rem;
-  color: var(--medgrey);
+  color: var(--lightgrey);
 
   @media screen and (min-width: 1250px) {
     width: 100%;
@@ -167,7 +167,7 @@ const TopTitle = styled.h3`
   z-index: 2;
   font-size: 2rem;
   font-weight: 200;
-  color: var(--lightestgrey);
+  color: #fff;
   margin: .2rem 0 3.5rem 0;
   display: inline-block;
 
@@ -180,7 +180,7 @@ const BottomTitle = styled.h3`z
   z-index: 2;
   font-size: 2rem;
   font-weight: 200;
-  color: var(--lightestgrey);
+  color: #fff;
   margin: 0rem 0 1.5rem 0;
   display: inline-block;
 
@@ -201,7 +201,7 @@ const Actions = styled.div`
 const Button = styled.a`
   margin-bottom: 1rem;
   display: inline-block;
-  background: var(--darkgrey);
+  background: #356288;
   padding: 1em;
   color: #fff;
   text-decoration: none;
@@ -210,7 +210,8 @@ const Button = styled.a`
   border-radius: 3px;
 
   &:hover {
-    background: var(--medgrey);
+    background: #4495DB;
+    color: #fff;
   }
 
   .fas {

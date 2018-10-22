@@ -28,7 +28,7 @@ const projects = [
     demo: 'https://arielbk.com/pomodorotimer'
   },
   {
-    name: 'Marija Peraić',
+    name: 'UX Portfolio',
     image: 'static/images/marijap/main-screen.png',
     blurb: [
       "A design/coding collaboration for the UX designer Marija Peraic's portfolio.",
@@ -78,7 +78,7 @@ const projects = [
 export default () => (
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#434347" />
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#45484C" />
     </Arrow>
     <header>
         <Title>My projects</Title>
@@ -143,12 +143,13 @@ const Arrow = styled.svg`
 
 const Title = styled.h1`
   margin: 0;
-  color: #ABABE3;
+  color: var(--lightestgrey);
   font-weight: 200;
   font-size: 2.2rem;
+  text-transform: uppercase;
 `;
 
 const Lead = styled.p`
   color: var(--medgrey);
-  margin: 1rem 0 4.7rem 0;
+  margin: .5rem 0 4.7rem 0;
 `;
