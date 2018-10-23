@@ -17,8 +17,14 @@ export default class extends React.Component {
             <Skill skill={skill} key={skill}>{skill}</Skill>
           ))}
         </Skills>
-        
-        <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
+        <ThumbContainer>
+          <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
+          <a href={this.props.demo}>
+            <ThumbOverlay>
+              <i className="fas fa-external-link-alt" />
+            </ThumbOverlay>
+          </a>
+        </ThumbContainer>
         
         <Body>
           
@@ -29,8 +35,8 @@ export default class extends React.Component {
           </Text>
 
           <Actions>
-            <Button href={this.props.repo}>Code <i className="fas fa-external-link-alt"></i></Button>
-            <Button href={this.props.demo}>Demo <i className="fas fa-external-link-alt"></i></Button>
+            <Button href={this.props.repo}>Code <i className="fas fa-external-link-alt" /></Button>
+            <Button href={this.props.demo}>Demo <i className="fas fa-external-link-alt" /></Button>
           </Actions>
         </Body>
         
@@ -74,7 +80,7 @@ const Skills = styled.div`
   top: 12rem;
   width: 105px;
   position: absolute;
-  z-index: 999;
+  z-index: 10;
   padding: .5rem 0 2rem;
   overflow: hidden;
 
@@ -121,16 +127,10 @@ const Date = styled.div`
   text-align: right;
 `;
 
-
-const Thumb = styled.img`
-  z-index: 2;
+const ThumbContainer = styled.div`
   width: 100%;
   margin-bottom: 2.6rem;
-  border-radius: 3px;
-  box-shadow: 
-              0 15px 35px rgba(37, 37, 80, 0.1),
-              0 5px 15px rgba(0,0,0,.06);
-  filter: grayscale(1);
+  position: relative;
 
   @media screen and (min-width: 1250px) {
     margin-bottom: 0;
@@ -138,12 +138,37 @@ const Thumb = styled.img`
   }
 `;
 
+const Thumb = styled.img`
+  z-index: 2;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 
+              0 15px 35px rgba(37, 37, 80, 0.1),
+              0 5px 15px rgba(0,0,0,.06);
+  filter: grayscale(1);
+`;
+
 const ThumbOverlay = styled.div`
   z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 500px;
-  position: relative;
-  background: #000;
+  height: 100%;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  color: #fff;
+  opacity: 0;
+
+  a & {
+    :hover {
+      opacity: 1;
+    }
+  }
 `;
 
 const Body = styled.div`

@@ -131,6 +131,12 @@ const Portfolio = styled.div`
   @media screen and (max-width: 840px) {
     padding: 6rem 0 2rem;
   }
+
+  @media (max-width: 500px) {
+    header, footer {
+      margin: 0 1rem;
+    }
+  }
 `;
 
 const Arrow = styled.svg`
