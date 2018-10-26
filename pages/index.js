@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Infobar from '../components/Infobar';
 import Portfolio from '../components/Portfolio';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { colors } from '../components/variables';
+import variables from '../components/variables';
 
 const Content = styled.div`
   display: flex;
@@ -18,13 +18,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background: ${props => props.theme.lightestgrey};
+    background: ${props => props.theme.colors.lightestgrey};
   }
 
   body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.colors.black};
     margin: 0;
     padding: 0;
     background: #333;
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3, h4 {
-    color: ${props => props.theme.medgrey};
+    color: ${props => props.theme.colors.medgrey};
   }
 
   p {
@@ -41,17 +41,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${props => props.theme.brightblue};
+    ${props => props.theme.transition('color')};
+    color: ${props => props.theme.colors.brightblue};
     text-decoration: none;
 
     &:hover {
-      color: ${props=> props.theme.lightblue};
+      color: ${props=> props.theme.colors.lightblue};
     }
   }
 `;
 
 export default () => (
-  <ThemeProvider theme={colors}>
+  <ThemeProvider theme={variables}>
   <Content>
     <Head>
       <title>arielbk portfolio</title>
@@ -60,8 +61,8 @@ export default () => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <GlobalStyle />
-    <Infobar colors={colors} />
-    <Portfolio colors={colors} />
+    <Infobar />
+    <Portfolio />
   </Content>
   </ThemeProvider>
 );

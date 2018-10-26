@@ -1,6 +1,6 @@
 import Project from './Project';
 import styled, { ThemeProvider } from 'styled-components';
-import { colors } from '../components/variables';
+import variables from '../components/variables';
 
 // maybe this should be based on an API call - mongoose and mlab?
 const projects = [
@@ -77,7 +77,7 @@ const projects = [
 ];
 
 export default () => (
-  <ThemeProvider theme={colors}>
+  <ThemeProvider theme={variables}>
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
       <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#45484C" />
@@ -154,13 +154,13 @@ const Arrow = styled.svg`
 
 const Title = styled.h1`
   margin: 0;
-  color: ${props => props.theme.almostwhite};
+  color: ${props => props.theme.colors.almostwhite};
   font-weight: 200;
   font-size: 2.2rem;
   text-transform: uppercase;
 `;
 
 const Lead = styled.p`
-  color: ${props => props.theme.medgrey};
+  color: ${props => props.theme.colors.medgrey};
   margin: .5rem 0 4.7rem 0;
 `;

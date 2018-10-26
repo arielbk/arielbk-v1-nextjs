@@ -1,11 +1,11 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { colors } from '../components/variables';
+import variables from '../components/variables';
 
 export default class extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={colors}>
+      <ThemeProvider theme={variables}>
       <StyledProject dark={this.props.dark}>
         <Container>
           <TopTitle><a href={this.props.demo}>{this.props.name}</a></TopTitle>
@@ -47,14 +47,14 @@ export default class extends React.Component {
 };
 
 const StyledProject = styled.div`
-  background: ${props => props.dark ? '#272727;' : '#333;'}
+  background: ${props => props.dark ? '#272727' : '#333'};
   margin: 0;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
 
-  @media (min-width: 850px) {
+  @media ${props => props.theme.media.md} {
     width: calc(100vw - 300px);
   }
 `;
@@ -64,15 +64,19 @@ const Container = styled.div`
   max-width: 1200px;
   position: relative;
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  @media (max-width: 500px) {
-    padding: 4rem 1rem;
+  @media ${props => props.theme.media.md} {
+    padding: 4rem 2rem 3rem;
+  }
+
+  @media ${props => props.theme.media.sm} {
+    padding: 4rem 1rem 1rem;
   }
 `;
 
@@ -84,17 +88,21 @@ const Skills = styled.div`
   padding: .5rem 0 2rem;
   overflow: hidden;
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     top: 5rem;
+  }
+
+  @media ${props => props.theme.media.sm} {
+    top: 8rem;
   }
 `;
 
 const Skill = styled.span`
-  background: ${props => props.theme.skills[props.skill.toLowerCase()]};
+  background: ${props => props.theme.colors.skills[props.skill.toLowerCase()]};
   color: ${props =>
     ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
       ? '#fff;'
-      : props.theme.black};
+      : props.theme.colors.black};
   padding: .4rem .6rem;
   display: inline-block;
   width: 100%;
@@ -132,9 +140,13 @@ const ThumbContainer = styled.div`
   margin-bottom: 2.6rem;
   position: relative;
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     margin-bottom: 0;
     width: 53%;
+  }
+
+  @media ${props => props.theme.media.sm} {
+    margin-bottom: 1.5rem;
   }
 `;
 
@@ -149,6 +161,7 @@ const Thumb = styled.img`
 `;
 
 const ThumbOverlay = styled.div`
+  ${props => props.theme.transition('opacity')};
   z-index: 100;
   position: absolute;
   top: 0;
@@ -160,7 +173,7 @@ const ThumbOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8rem;
+  font-size: 6rem;
   color: #fff;
   opacity: 0;
 
@@ -179,7 +192,7 @@ const Body = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
@@ -188,7 +201,7 @@ const Body = styled.div`
     margin: 0;
   }
 
-  @media (max-width: 500px) {
+  @media ${props => props.theme.media.sm} {
     flex-direction: column;
   }
 `;
@@ -196,19 +209,20 @@ const Body = styled.div`
 const Text = styled.div`
   width: 62%;
   margin-right: 1rem;
-  color: ${props => props.theme.lightgrey};
+  color: ${props => props.theme.colors.lightgrey};
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     width: 100%;
   }
 
-  @media (max-width: 500px) {
+  @media ${props => props.theme.media.sm} {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 `;
 
-const TopTitle = styled.h3`
+const Title = styled.h3`
   z-index: 2;
   font-size: 2rem;
   font-weight: 200;
@@ -217,41 +231,33 @@ const TopTitle = styled.h3`
   display: inline-block;
 
   a {
+    ${props => props.theme.transition('color')};
     color: #fff;
 
     :hover {
-      color: ${props => props.theme.brightblue};
+      color: ${props => props.theme.colors.brightblue};
     }
-  }
-
-  @media screen and (min-width: 1250px) {
-    display: none;
   }
 `;
 
-const BottomTitle = styled.h3`z
-  z-index: 2;
-  font-size: 2rem;
-  font-weight: 200;
-  color: #fff;
-  margin: 0rem 0 1.5rem 0;
-  display: inline-block;
-
-  a {
-    color: #fff;
-
-    :hover {
-      color: ${props => props.theme.brightblue};
-    }
+const TopTitle = styled(Title)`
+  @media ${props => props.theme.media.lg} {
+    display: none;
   }
 
-  @media screen and (max-width: 1250px) {
+  @media ${props => props.theme.media.sm} {
+    margin-bottom: 1rem;
+  }
+`;
+
+const BottomTitle = styled(Title)`
+  @media ${props => props.theme.media.md} {
     display: none;
   }
 `;
 
 const Actions = styled.div`
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -262,25 +268,26 @@ const Actions = styled.div`
 const Button = styled.a`
   margin-bottom: 1rem;
   display: inline-block;
-  background: ${props => props.theme.darkgrey};
+  background: ${props => props.theme.colors.darkgrey};
   padding: 1em;
-  color: ${props => props.theme.lightgrey};
+  color: ${props => props.theme.colors.lightgrey};
   text-decoration: none;
   width: 100%;
   text-align: center;
   border-radius: 3px;
+  ${props => props.theme.transition('background')};
 
   &:hover {
-    background: ${props => props.theme.brightblue};
+    background: ${props => props.theme.colors.brightblue};
     color: #fff;
   }
 
   .fas {
     padding: 0 .4rem;
-    color: ${props => props.theme.lightgrey};
+    color: ${props => props.theme.colors.lightgrey};
   }
 
-  @media screen and (min-width: 1250px) {
+  @media ${props => props.theme.media.lg} {
     margin: 1rem 0 0;
     width: 45%;
   }

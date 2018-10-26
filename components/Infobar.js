@@ -1,8 +1,8 @@
 import styled, { ThemeProvider } from 'styled-components';
-import { colors } from '../components/variables';
+import variables from '../components/variables';
 
 export default () => (
-  <ThemeProvider theme={colors}>
+  <ThemeProvider theme={variables}>
   <Infobar>
     <Container>
     {/* HEADER SECTION */}
@@ -20,9 +20,24 @@ export default () => (
     
     {/* <!-- CONTACT SECTION --> */}
     <Contact>
-      <a href="mailto:buchwald.kearney@gmail.com">Email</a>
-      <a href="https://github.com/arielbk">GitHub</a>
-      <a href="https://codepen.io/arielbk">Codepen</a>
+      <a href="mailto:buchwald.kearney@gmail.com">
+        <span>
+          <i className="far fa-envelope" />
+          Email
+        </span>
+      </a>
+      <a href="https://github.com/arielbk">
+        <span>
+          <i className="fab fa-github" />
+          GitHub
+        </span>
+      </a>
+      <a href="https://codepen.io/arielbk">
+        <span>
+          <i className="fab fa-codepen" />
+          Codepen
+        </span>
+      </a>
     </Contact>
     </Container>
   </Infobar>
@@ -35,7 +50,7 @@ const Infobar = styled.div`
 
   width: 300px;
   background: #45484C;
-  color: ${props => props.theme.lightgrey};
+  color: ${props => props.theme.colors.lightgrey};
   transition: .27s;
 
   @media screen and (max-width: 840px) {
@@ -90,7 +105,7 @@ const Biophoto = styled.img`
   display: block;
   width: 100%;
   margin: 0;
-  border-radius: 3px;
+  border-radius: 50%;
 
   @media screen and (max-width: 840px) {
     height: 230px;
@@ -120,13 +135,25 @@ const Contact = styled.div`
   position: relative;
 
   a {
-    display: inline-block;
+    ${props => props.theme.transition('background')};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     padding: 0.5rem;
-    background: ${props => props.theme.black};
-    border-radius: 3px;
+    background: ${props => props.theme.colors.black};
+    font-size: 0.6rem;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+
+    i {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
 
     :hover {
-      background: ${props => props.theme.brightblue};
+      background: ${props => props.theme.colors.brightblue};
       color: #fff;
     }
   }
