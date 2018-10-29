@@ -54,7 +54,7 @@ const StyledProject = styled.div`
   display: flex;
   justify-content: center;
 
-  @media ${props => props.theme.media.md} {
+  @media ${props => props.theme.media.xlg} {
     width: calc(100vw - 300px);
   }
 `;
@@ -64,7 +64,7 @@ const Container = styled.div`
   max-width: 1200px;
   position: relative;
 
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,8 +88,8 @@ const Skills = styled.div`
   padding: .5rem 0 2rem;
   overflow: hidden;
 
-  @media ${props => props.theme.media.lg} {
-    top: 5rem;
+  @media ${props => props.theme.media.xlg} {
+    top: 6rem;
   }
 
   @media ${props => props.theme.media.sm} {
@@ -103,21 +103,21 @@ const Skill = styled.span`
     ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
       ? '#fff;'
       : props.theme.colors.black};
-  padding: .4rem .6rem;
+  padding: .5rem .6rem;
   display: inline-block;
   width: 100%;
   border-radius: 0 25px 25px 0;
   margin: .2rem 0;
   font-size: .9rem;
-  box-shadow: 0 15px 35px rgba(37, 37, 80, 0.1),
-              0 5px 15px rgba(0,0,0,.06);
-  opacity: .9;
-  font-weight: bold;
+  box-shadow: 
+              0 3px 20px rgba(37, 37, 60, .1),
+              0 -4px 5px rgba(0,0,0,0.3);
+  position: relative;
+  left: -1px;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     margin-bottom: .05rem;
-    padding-top: .2rem;
-    padding-bottom: .2rem;
+    padding: .4rem .6rem;
   }
 `;
 
@@ -140,7 +140,7 @@ const ThumbContainer = styled.div`
   margin-bottom: 2.6rem;
   position: relative;
 
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     margin-bottom: 0;
     width: 53%;
   }
@@ -192,7 +192,7 @@ const Body = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
@@ -211,7 +211,7 @@ const Text = styled.div`
   margin-right: 1rem;
   color: ${props => props.theme.colors.lightgrey};
 
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     width: 100%;
   }
 
@@ -227,7 +227,6 @@ const Title = styled.h3`
   font-size: 2rem;
   font-weight: 200;
   color: #fff;
-  margin: .2rem 0 3.5rem 0;
   display: inline-block;
 
   a {
@@ -241,7 +240,9 @@ const Title = styled.h3`
 `;
 
 const TopTitle = styled(Title)`
-  @media ${props => props.theme.media.lg} {
+  margin: .2rem 0 3.5rem 0;
+
+  @media ${props => props.theme.media.xlg} {
     display: none;
   }
 
@@ -251,13 +252,16 @@ const TopTitle = styled(Title)`
 `;
 
 const BottomTitle = styled(Title)`
-  @media ${props => props.theme.media.md} {
-    display: none;
+  margin: 0 0 1.5rem 0;
+  display: none;
+    
+  @media ${props => props.theme.media.xlg} {
+    display: block;
   }
 `;
 
 const Actions = styled.div`
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -287,7 +291,7 @@ const Button = styled.a`
     color: ${props => props.theme.colors.lightgrey};
   }
 
-  @media ${props => props.theme.media.lg} {
+  @media ${props => props.theme.media.xlg} {
     margin: 1rem 0 0;
     width: 45%;
   }

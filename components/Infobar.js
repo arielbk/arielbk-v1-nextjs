@@ -49,7 +49,7 @@ const Infobar = styled.div`
   flex-basis: 300px;
 
   width: 300px;
-  background: #45484C;
+  background: #515151;
   color: ${props => props.theme.colors.lightgrey};
   transition: .27s;
 
@@ -103,9 +103,9 @@ const Caption = styled.h3`
 
 const Biophoto = styled.img`
   display: block;
-  width: 100%;
-  margin: 0;
-  border-radius: 50%;
+  width: 80%;
+  margin: 0 auto 3.5rem;
+  border-radius: 3px;
 
   @media screen and (max-width: 840px) {
     height: 230px;

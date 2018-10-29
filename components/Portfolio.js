@@ -5,11 +5,35 @@ import variables from '../components/variables';
 // maybe this should be based on an API call - mongoose and mlab?
 const projects = [
   {
+    name: 'arielbk portfolio',
+    image: 'static/images/arielbk/main-screen.png',
+    blurb: [
+      "The portfolio that you are viewing this on. A place to showcase my web development projects.",
+      "I learnt a bit about using server side rendering with React using Next JS."
+    ],
+    skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
+    date: 'October 2018',
+    repo: 'https://github.com/arielbk/arielbk',
+    demo: 'https://arielbk.com/'
+  },
+  {
+    name: 'BPM Count',
+    image: 'static/images/bpmcount/main-screen.png',
+    blurb: [
+      "An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).",
+      "This is a tool that I use a lot, and something that I would like to revisit and add more features to."
+    ],
+    skills: ['JavaScript', 'React', 'Sketch'],
+    date: 'September 2018',
+    repo: 'https://github.com/arielbk/BPM-Counter',
+    demo: 'https://arielbk.com/bpmcount'
+  },
+  {
     name: 'Lucid',
     image: 'static/images/lucid/main-screen.png',
     blurb: [
       "This was a project that I undertook as part of a 'Chingu Cohort', a community coding project.",
-      "This project is currently a proof-of-concept — a fully functional frontend-only app."
+      "It is currently a proof-of-concept — a functional frontend-only app prototype."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'August 2018',
@@ -21,7 +45,7 @@ const projects = [
     image: 'static/images/pomodoro/main-screen.png',
     blurb: [
       "My first full-fledged React app: a Pomodoro timer to track your work periods.",
-      "It was an eye-opener to design the interface beforehand and I think it paid off."
+      "It was an eye-opener to design the interface beforehand, as well as using styled-components within React."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'July 2018',
@@ -49,7 +73,7 @@ const projects = [
     skills: ['JavaScript', 'React'],
     date: 'June 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/date-facts-react',
-    demo: 'http://arielbk.com/date-facts/'
+    demo: 'http://datefacts.glitch.me/'
   },
   {
     name: 'Word Counter',
@@ -80,7 +104,7 @@ export default () => (
   <ThemeProvider theme={variables}>
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#45484C" />
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#515151" />
     </Arrow>
     <header>
         <Title>My projects</Title>

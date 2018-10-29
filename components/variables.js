@@ -2,8 +2,8 @@ const variables =
 {
   media: {
     sm: '(max-width: 500px)',
-    md: '(min-width: 500px) and (max-width: 840px)',
-    lg: '(min-width: 840px) and (max-width: 1250)',
+    md: '(max-width: 840px)',
+    lg: '(max-width: 1250)',
     xlg: '(min-width: 1250px)'
   },
 
@@ -29,7 +29,9 @@ const variables =
       sass: '#b25786',
       jquery: '#2e6daa',
       python: '#223c55',
-      flask: '#fff'
+      flask: '#fff',
+      figma: '#60C290',
+      nextjs: '#fff'
     }
   }
 }
