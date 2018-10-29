@@ -7,7 +7,7 @@ import variables from '../components/variables';
 const Content = styled.div`
   display: flex;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     display: block;
   }
 `;

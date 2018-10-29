@@ -152,11 +152,11 @@ const Portfolio = styled.div`
     }
   }
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     padding: 6rem 0 2rem;
   }
 
-  @media (max-width: 500px) {
+  @media ${props => props.theme.media.sm} {
     header, footer {
       margin: 0 1rem;
     }
@@ -168,7 +168,7 @@ const Arrow = styled.svg`
   left: 0;
   top: 2.6em;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     transform: rotate(90deg);
     top: -24px;
     left: 50%;

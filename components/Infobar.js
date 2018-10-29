@@ -53,7 +53,7 @@ const Infobar = styled.div`
   color: ${props => props.theme.colors.lightgrey};
   transition: .27s;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     width: 100%;
   }
 `;
@@ -71,7 +71,7 @@ const Container = styled.div`
   padding-bottom: 0;
   transition: .27s;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     display: block;
     width: 300px;
     height: auto;
@@ -96,7 +96,7 @@ const Caption = styled.h3`
   margin-bottom: 3rem;
   font-weight: 200;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     text-align: center;
   }
 `;
@@ -107,7 +107,7 @@ const Biophoto = styled.img`
   margin: 0 auto 3.5rem;
   border-radius: 3px;
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     height: 230px;
     width: 230px;
     margin: 0 auto;
@@ -121,7 +121,7 @@ const Biotext = styled.div`
     font-size: 1rem;
   }
 
-  @media screen and (max-width: 840px) {
+  @media ${props => props.theme.media.md} {
     text-align: center;
   }
 `;
