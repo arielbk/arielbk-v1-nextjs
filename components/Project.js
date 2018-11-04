@@ -76,7 +76,7 @@ const Container = styled.div`
   }
 
   @media ${props => props.theme.media.sm} {
-    padding: 4rem 1rem 1rem;
+    padding: 2rem 1rem 1rem;
   }
 `;
 
@@ -93,7 +93,7 @@ const Skills = styled.div`
   }
 
   @media ${props => props.theme.media.sm} {
-    top: 8rem;
+    top: 8.2rem;
   }
 `;
 
@@ -125,14 +125,20 @@ const Date = styled.div`
   z-index: 0;
   position: absolute;
   right: 2rem;
-  top: 2rem;
+  top: 2.5rem;
   display: inline-block;
   width: 100%;
   margin: 0;
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
-  color: #656565;
+  font-size: 1.3rem;
+  color: rgba(202, 202, 202, 0.2);
   text-align: right;
+
+  @media ${props => props.theme.media.sm} {
+    font-size: 1rem;
+    right: 1rem;
+    top: 1.5rem;
+  }
 `;
 
 const ThumbContainer = styled.div`
@@ -146,7 +152,7 @@ const ThumbContainer = styled.div`
   }
 
   @media ${props => props.theme.media.sm} {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -191,6 +197,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   @media ${props => props.theme.media.xlg} {
     flex-direction: column;
@@ -207,18 +214,24 @@ const Body = styled.div`
 `;
 
 const Text = styled.div`
-  width: 62%;
-  margin-right: 1rem;
+  width: 73%;
+  margin-right: 1.5rem;
   color: ${props => props.theme.colors.lightgrey};
 
   @media ${props => props.theme.media.xlg} {
     width: 100%;
   }
 
+  @media ${props => props.theme.media.md} {
+    p {
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+  }
+
   @media ${props => props.theme.media.sm} {
     width: 100%;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin: 0 auto 1rem;
   }
 `;
 
@@ -247,7 +260,7 @@ const TopTitle = styled(Title)`
   }
 
   @media ${props => props.theme.media.sm} {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -261,6 +274,11 @@ const BottomTitle = styled(Title)`
 `;
 
 const Actions = styled.div`
+  
+  @media ${props => props.theme.media.sm} {
+    width: 100%;
+  }
+
   @media ${props => props.theme.media.xlg} {
     display: flex;
     justify-content: space-between;

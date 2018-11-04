@@ -5,11 +5,23 @@ import variables from '../components/variables';
 // maybe this should be based on an API call - mongoose and mlab?
 const projects = [
   {
-    name: 'arielbk portfolio',
+    name: 'FilmBase',
+    image: 'static/images/filmbase/main-screen.png',
+    blurb: [
+      "A frontend website that fetches film information from The Movie Database API.",
+      "I was very mindful to incorporate best practices in React such as prop types, default props and testing using Jest."
+    ],
+    skills: ['JavaScript', 'React'],
+    date: 'November 2018',
+    repo: 'https://github.com/arielbk/filmbase',
+    demo: 'https://arielbk.com/'
+  },
+  {
+    name: 'arielbk',
     image: 'static/images/arielbk/main-screen.png',
     blurb: [
-      "The portfolio that you are viewing this on. A place to showcase my web development projects.",
-      "I learnt a bit about using server side rendering with React using Next JS."
+      "A platform to showcase my web development projects.",
+      "I learnt about using server side rendering with React using Next JS."
     ],
     skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
     date: 'October 2018',
@@ -104,7 +116,7 @@ export default () => (
   <ThemeProvider theme={variables}>
   <Portfolio>
     <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#515151" />
+      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#505152" />
     </Arrow>
     <header>
         <Title>My projects</Title>

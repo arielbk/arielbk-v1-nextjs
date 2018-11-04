@@ -49,7 +49,7 @@ const Infobar = styled.div`
   flex-basis: 300px;
 
   width: 300px;
-  background: #515151;
+  background: #505152;
   color: ${props => props.theme.colors.lightgrey};
   transition: .27s;
 
@@ -95,10 +95,6 @@ const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 3rem;
   font-weight: 200;
-
-  @media ${props => props.theme.media.md} {
-    text-align: center;
-  }
 `;
 
 const Biophoto = styled.img`
@@ -108,8 +104,7 @@ const Biophoto = styled.img`
   border-radius: 3px;
 
   @media ${props => props.theme.media.md} {
-    height: 230px;
-    width: 230px;
+    width: 100%;
     margin: 0 auto;
   }
 `;
