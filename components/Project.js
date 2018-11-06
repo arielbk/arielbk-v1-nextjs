@@ -19,7 +19,7 @@ export default class extends React.Component {
         </Skills>
         <ThumbContainer>
           <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
-          <a href={this.props.demo}>
+          <a href={this.props.demo} target="_blank">
             <ThumbOverlay>
               <i className="fas fa-external-link-alt" />
             </ThumbOverlay>
@@ -28,15 +28,15 @@ export default class extends React.Component {
         
         <Body>
           
-          <BottomTitle><a href={this.props.demo}>{this.props.name}</a></BottomTitle>
+          <BottomTitle><a href={this.props.demo} target="_blank">{this.props.name}</a></BottomTitle>
           
           <Text>
               {this.props.blurb.map((para, i) => (<p key={i}>{para}</p>))}
           </Text>
 
           <Actions>
-            <Button href={this.props.repo}>Code <i className="fas fa-external-link-alt" /></Button>
-            <Button href={this.props.demo}>Demo <i className="fas fa-external-link-alt" /></Button>
+            <Button href={this.props.repo} target="_blank">Code <i className="fas fa-external-link-alt" /></Button>
+            <Button href={this.props.demo} target="_blank">Demo <i className="fas fa-external-link-alt" /></Button>
           </Actions>
         </Body>
         

@@ -9,19 +9,19 @@ const projects = [
     image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
       "A frontend website that fetches film information from The Movie Database API.",
-      "I incorporated ESLint into my workflow to enforce coding best practices (currently AirBnB)."
+      "I incorporated ESLint into my workflow to enforce coding best practices."
     ],
     skills: ['JavaScript', 'React'],
     date: 'November 2018',
     repo: 'https://github.com/arielbk/filmbase',
-    demo: 'https://movies-tdpkqgdlxo.now.sh'
+    demo: 'https://movies-eyqgndvdgr.now.sh'
   },
   {
-    name: 'arielbk Portfolio',
+    name: 'arielbk',
     image: 'static/images/arielbk/main-screen.png',
     blurb: [
       "This website. A platform to showcase my web development projects.",
-      "It has been a great introduction to server side rendering using NextJS."
+      "It has been a great introduction to server-side rendering using NextJS."
     ],
     skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
     date: 'October 2018',

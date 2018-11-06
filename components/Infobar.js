@@ -15,7 +15,13 @@ export default () => (
 
     {/* <!-- BIO SECTION --> */}
     <Biotext>
-      <p>Currently focused on frontend development and the React ecosystem, I am always learning.</p>
+      <p>
+        I'm a web developer living in Zagreb.
+        I code everyday with music pumping in my headphones.
+      </p>
+      <p>
+        Right now, I'm immersed in JavaScript and React.
+      </p>
     </Biotext>
     
     {/* <!-- CONTACT SECTION --> */}
@@ -100,7 +106,7 @@ const Caption = styled.h3`
 const Biophoto = styled.img`
   display: block;
   width: 80%;
-  margin: 0 auto 3.5rem;
+  margin: 0 auto 2rem;
   border-radius: 3px;
 
   @media ${props => props.theme.media.md} {
@@ -113,11 +119,7 @@ const Biotext = styled.div`
   margin: 2rem 0 0 0;
   p {
     line-height: 1.5;
-    font-size: 1rem;
-  }
-
-  @media ${props => props.theme.media.md} {
-    text-align: center;
+    font-size: 0.9rem;
   }
 `;
 

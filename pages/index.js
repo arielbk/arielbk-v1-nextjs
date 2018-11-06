@@ -58,6 +58,7 @@ export default () => (
       <title>arielbk portfolio</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet" />
+      <link rel="shortcut icon" href="static/images/favicon.ico"></link>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
     <GlobalStyle />
