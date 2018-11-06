@@ -5,23 +5,23 @@ import variables from '../components/variables';
 // maybe this should be based on an API call - mongoose and mlab?
 const projects = [
   {
-    name: 'FilmBase',
-    image: 'static/images/filmbase/main-screen.png',
+    name: 'Film Base',
+    image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
       "A frontend website that fetches film information from The Movie Database API.",
-      "I was very mindful to incorporate best practices in React such as prop types, default props and testing using Jest."
+      "I incorporated ESLint into my workflow to enforce coding best practices (currently AirBnB)."
     ],
     skills: ['JavaScript', 'React'],
     date: 'November 2018',
     repo: 'https://github.com/arielbk/filmbase',
-    demo: 'https://arielbk.com/'
+    demo: 'https://movies-tdpkqgdlxo.now.sh'
   },
   {
-    name: 'arielbk',
+    name: 'arielbk Portfolio',
     image: 'static/images/arielbk/main-screen.png',
     blurb: [
-      "A platform to showcase my web development projects.",
-      "I learnt about using server side rendering with React using Next JS."
+      "This website. A platform to showcase my web development projects.",
+      "It has been a great introduction to server side rendering using NextJS."
     ],
     skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
     date: 'October 2018',
@@ -33,7 +33,7 @@ const projects = [
     image: 'static/images/bpmcount/main-screen.png',
     blurb: [
       "An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).",
-      "This is a tool that I use a lot, and something that I would like to revisit and add more features to."
+      "I was insired to make this because it is a tool that I find helpful and use frequently."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'September 2018',
@@ -44,8 +44,8 @@ const projects = [
     name: 'Lucid',
     image: 'static/images/lucid/main-screen.png',
     blurb: [
-      "This was a project that I undertook as part of a 'Chingu Cohort', a community coding project.",
-      "It is currently a proof-of-concept — a functional frontend-only app prototype."
+      "A project undertaken as part of a 'Chingu Cohort', a community coding 'build-to-learn' project.",
+      "This was great UI design and code practice, and working with other coders was invaluable."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'August 2018',
@@ -56,8 +56,8 @@ const projects = [
     name: 'Pomodoro Timer',
     image: 'static/images/pomodoro/main-screen.png',
     blurb: [
-      "My first full-fledged React app: a Pomodoro timer to track your work periods.",
-      "It was an eye-opener to design the interface beforehand, as well as using styled-components within React."
+      "A timer to track work and break periods with the Pomodoro productivity hack.",
+      "A pet project that has gone through uncountable rewrites as I continue learning."
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'July 2018',
@@ -69,7 +69,7 @@ const projects = [
     image: 'static/images/marijap/main-screen.png',
     blurb: [
       "A design/coding collaboration for the UX designer Marija Peraic's portfolio.",
-      "This gave me some insight into developing a project with the end user in mind."
+      "Working together with a designer was insightful — design first, and then code."
     ],
     skills: ['Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
     date: 'June 2018',
@@ -79,8 +79,8 @@ const projects = [
   {
     name: 'Date Facts',
     image: 'static/images/datefacts/main-screen.png',
-    blurb: ["Shows facts for any date based on data from the 'Number Facts' API.",
-      "This was great practice for fetching data with a simple frontend."
+    blurb: ["Shows facts for any date based on data fetched from the 'Number Facts' API.",
+      "This was great practice for communicating with an API and building out a simple frontend."
     ],
     skills: ['JavaScript', 'React'],
     date: 'June 2018',
@@ -91,8 +91,8 @@ const projects = [
     name: 'Word Counter',
     image: 'static/images/wordcounter/main-screen.png',
     blurb: [
-      "Although I originally wrote this as an exercise in modern JavaScript, it was rewritten in React.",
-      "Migrating an app, even a simple one like this, is a great learning experience."],
+      "This was made to practice modern JavaScript, before reconstructing it in React.",
+      "Migrating a simple app like this was a great introduction to the framework."],
     skills: ['JavaScript', 'React'],
     date: 'May 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/word-counter-react',
