@@ -123,6 +123,27 @@ export default () => (
         <Lead>
           A selection of coding projects, with the more recent at the top.
         </Lead>
+
+        <Contact>
+          <a href="mailto:buchwald.kearney@gmail.com">
+            <span>
+              <i className="far fa-envelope" />
+              Email
+            </span>
+          </a>
+          <a href="https://github.com/arielbk">
+            <span>
+              <i className="fab fa-github" />
+              GitHub
+            </span>
+          </a>
+          <a href="https://codepen.io/arielbk">
+            <span>
+              <i className="fab fa-codepen" />
+              Codepen
+            </span>
+          </a>
+        </Contact>
     </header>
 
     {projects.map((project, index) => (
@@ -199,4 +220,47 @@ const Title = styled.h1`
 const Lead = styled.p`
   color: ${props => props.theme.colors.medgrey};
   margin: .5rem 0 4.7rem 0;
+`;
+
+const Contact = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 260px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 101;
+
+  a {
+    ${props => props.theme.transition('background')};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background: rgba(10,10,10,0.5);
+    font-size: 0.6rem;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    box-shadow:
+      0 15px 35px rgba(37,37,80,0.1), 0 5px 15px rgba(0,0,0,.06);
+
+    i {
+      width: 100%;
+      font-size: 2.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    :hover {
+      background: ${props => props.theme.colors.brightblue};
+      color: #fff;
+    }
+  }
+
+  @media ${props => props.theme.media.md} {
+    display: none;
+  }
 `;

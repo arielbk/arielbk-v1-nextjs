@@ -17,33 +17,39 @@ export default () => (
     <Biotext>
       <p>
         I'm a web developer living in Zagreb.
-        I code everyday with music pumping in my headphones.
+        I code every day with music pumping in my headphones.
       </p>
       <p>
-        Right now, I'm immersed in JavaScript and React.
+        Right now I'm immersed in JavaScript and React.
       </p>
     </Biotext>
     
     {/* <!-- CONTACT SECTION --> */}
     <Contact>
-      <a href="mailto:buchwald.kearney@gmail.com">
-        <span>
-          <i className="far fa-envelope" />
-          Email
-        </span>
-      </a>
-      <a href="https://github.com/arielbk">
-        <span>
-          <i className="fab fa-github" />
-          GitHub
-        </span>
-      </a>
-      <a href="https://codepen.io/arielbk">
-        <span>
-          <i className="fab fa-codepen" />
-          Codepen
-        </span>
-      </a>
+        <div>
+          <a href="mailto:buchwald.kearney@gmail.com">
+            <span>
+              <i className="far fa-envelope" />
+              <h4>Email</h4>
+            </span>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/arielbk">
+            <span>
+              <i className="fab fa-github" />
+              <h4>GitHub</h4>
+            </span>
+          </a>
+        </div>
+        <div>
+          <a href="https://codepen.io/arielbk">
+            <span>
+              <i className="fab fa-codepen" />
+              <h4>Codepen</h4>
+            </span>
+          </a>
+        </div>
     </Contact>
     </Container>
   </Infobar>
@@ -99,7 +105,7 @@ const Title = styled.h1`
 
 const Caption = styled.h3`
   margin-top: .5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   font-weight: 200;
 `;
 
@@ -118,41 +124,53 @@ const Biophoto = styled.img`
 const Biotext = styled.div`
   margin: 2rem 0 0 0;
   p {
-    line-height: 1.5;
-    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 1.75;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 `;
 
 const Contact = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 3rem 0 2rem 0;
+  margin: 2.5rem 0 2rem;
   position: relative;
 
-  a {
-    ${props => props.theme.transition('background')};
+  div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border-radius: 50%;
-    padding: 0.5rem;
-    background: ${props => props.theme.colors.black};
     font-size: 0.6rem;
     text-align: center;
-    width: 70px;
-    height: 70px;
-
-    i {
-      font-size: 2rem;
-      margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
+    
+    :hover {
+      h4 {
+        color: #fff;
+      }
+    }
+    
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      h4 {
+        margin: 0 auto;
+        font-size: 1rem;
+        ${props => props.theme.transition('color')};
+      }
     }
 
-    :hover {
-      background: ${props => props.theme.colors.brightblue};
-      color: #fff;
+    i {
+      font-size: 1.5rem;
+      padding: 0.4rem;
+      margin: 0 1rem 0 3rem;
+      color: ${props => props.theme.colors.black};
+      background: #fff;
+      ${props => props.theme.transition('background')};
+      display: inline-block;
+      border-radius: 50%;
     }
   }
 `;
-

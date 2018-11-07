@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: ${props => props.theme.colors.black};
     margin: 0;
@@ -58,6 +58,9 @@ export default () => (
       <title>arielbk portfolio</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
+
       <link rel="shortcut icon" href="static/images/favicon.ico"></link>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>

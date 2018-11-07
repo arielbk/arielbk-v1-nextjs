@@ -217,6 +217,7 @@ const Text = styled.div`
   width: 73%;
   margin-right: 1.5rem;
   color: ${props => props.theme.colors.lightgrey};
+  font-weight: 200;
 
   @media ${props => props.theme.media.xlg} {
     width: 100%;
