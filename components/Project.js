@@ -125,7 +125,7 @@ const Date = styled.div`
   z-index: 0;
   position: absolute;
   right: 2rem;
-  top: 2.5rem;
+  top: 5rem;
   display: inline-block;
   width: 100%;
   margin: 0;

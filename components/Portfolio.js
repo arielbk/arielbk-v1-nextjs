@@ -12,7 +12,7 @@ const projects = [
       "I incorporated ESLint into my workflow to enforce coding best practices."
     ],
     skills: ['JavaScript', 'React'],
-    date: 'November 2018',
+    date: 'In Progress',
     repo: 'https://github.com/arielbk/filmbase',
     demo: 'https://movies-eyqgndvdgr.now.sh'
   },

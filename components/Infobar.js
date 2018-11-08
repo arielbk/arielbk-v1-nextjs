@@ -58,12 +58,11 @@ export default () => (
 
 const Infobar = styled.div`
   flex: none;
-  flex-basis: 300px;
+  flex-basis: 270px;
 
   width: 300px;
   background: #505152;
   color: ${props => props.theme.colors.lightgrey};
-  transition: .27s;
 
   @media ${props => props.theme.media.md} {
     width: 100%;
@@ -71,13 +70,12 @@ const Infobar = styled.div`
 `;
 
 const Container = styled.div`
-  width: 380px;
+  width: 270px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   overflow-y: auto;
-  width: 300px;
   padding: 1.7em;
   padding-top: 2.2rem;
   padding-bottom: 0;
@@ -85,12 +83,17 @@ const Container = styled.div`
 
   @media ${props => props.theme.media.md} {
     display: block;
-    width: 300px;
+    width: 360px;
     height: auto;
     padding-bottom: 3rem;
     margin: 0 auto;
     position: relative;
     overflow-y: visible;
+  }
+
+  @media ${props => props.theme.media.sm} {
+    max-width: 360px;
+    width: auto;
   }
 `;
 
@@ -101,22 +104,32 @@ const Title = styled.h1`
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+  line-height: 1.25;
+
+  @media ${props => props.theme.media.md} {
+    // margin-left: 4.5rem;
+    text-align: center;
+  }
 `;
 
 const Caption = styled.h3`
   margin-top: .5rem;
   margin-bottom: 2.5rem;
   font-weight: 200;
+  
+  @media ${props => props.theme.media.md} {
+    text-align: center;
+  }
 `;
 
 const Biophoto = styled.img`
   display: block;
-  width: 80%;
+  width: 90%;
   margin: 0 auto 2rem;
   border-radius: 3px;
 
   @media ${props => props.theme.media.md} {
-    width: 100%;
+    width: 67%;
     margin: 0 auto;
   }
 `;
@@ -128,6 +141,10 @@ const Biotext = styled.div`
     line-height: 1.75;
     font-size: 1rem;
     margin-bottom: 1rem;
+  }
+
+  @media ${props => props.theme.media.md} {
+    text-align: center;
   }
 `;
 
@@ -143,6 +160,13 @@ const Contact = styled.div`
     font-size: 0.6rem;
     text-align: center;
     margin-bottom: 1rem;
+
+    @media ${props => props.theme.media.md} {
+      margin: 0 0 1rem 6rem;
+    }
+    @media ${props => props.theme.media.sm} {
+      margin: 0 0 1rem 4rem;
+    }
     
     :hover {
       h4 {
@@ -165,7 +189,7 @@ const Contact = styled.div`
     i {
       font-size: 1.5rem;
       padding: 0.4rem;
-      margin: 0 1rem 0 3rem;
+      margin-right: 1rem;
       color: ${props => props.theme.colors.black};
       background: #fff;
       ${props => props.theme.transition('background')};
