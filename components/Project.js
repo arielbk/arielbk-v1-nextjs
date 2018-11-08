@@ -1,53 +1,89 @@
-import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import variables from '../components/variables';
+import PropTypes from 'prop-types';
+import variables from './variables';
 
-export default class extends React.Component {
-  render() {
-    return (
-      <ThemeProvider theme={variables}>
-      <StyledProject dark={this.props.dark}>
+const Project = (props) => {
+  const {
+    dark, demo, name, date, skills, image, blurb, repo,
+  } = props;
+  return (
+    <ThemeProvider theme={variables}>
+      <StyledProject dark={dark}>
         <Container>
-          <TopTitle><a href={this.props.demo}>{this.props.name}</a></TopTitle>
-        <Date>{this.props.date}</Date>
-        
-        <Skills>
-          {this.props.skills.length &&
-          this.props.skills.map(skill => (
-            <Skill skill={skill} key={skill}>{skill}</Skill>
-          ))}
-        </Skills>
-        <ThumbContainer>
-          <Thumb src={this.props.image} alt={`${this.props.name} main page screenshot`} />
-          <a href={this.props.demo} target="_blank">
-            <ThumbOverlay>
-              <i className="fas fa-external-link-alt" />
-            </ThumbOverlay>
-          </a>
-        </ThumbContainer>
-        
-        <Body>
-          
-          <BottomTitle><a href={this.props.demo} target="_blank">{this.props.name}</a></BottomTitle>
-          
-          <Text>
-              {this.props.blurb.map((para, i) => (<p key={i}>{para}</p>))}
-          </Text>
+          <TopTitle><a href={demo}>{name}</a></TopTitle>
+          <Date>{date}</Date>
 
-          <Actions>
-            <Button href={this.props.repo} target="_blank">Code <i className="fas fa-external-link-alt" /></Button>
-            <Button href={this.props.demo} target="_blank">Demo <i className="fas fa-external-link-alt" /></Button>
-          </Actions>
-        </Body>
-        
+          <Skills>
+            {skills.length
+            && skills.map(skill => (
+              <Skill skill={skill} key={skill}>{skill}</Skill>
+            ))}
+          </Skills>
+          <ThumbContainer>
+            <Thumb src={image} alt={`${name} main page screenshot`} />
+            <a href={demo} target="_blank" rel="noopener noreferrer">
+              <ThumbOverlay>
+                <i className="fas fa-external-link-alt" />
+              </ThumbOverlay>
+            </a>
+          </ThumbContainer>
+
+          <Body>
+            <BottomTitle>
+              <a href={demo} target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
+            </BottomTitle>
+
+            <Text>
+              {/* eslint-disable-next-line react/no-array-index-key */}
+              {blurb.map((para, i) => (<p key={i}>{para}</p>))}
+            </Text>
+
+            <Actions>
+              <Button href={repo} target="_blank">
+                Code
+                {' '}
+                <i className="fas fa-external-link-alt" />
+              </Button>
+              <Button href={demo} target="_blank">
+                Demo
+                {' '}
+                <i className="fas fa-external-link-alt" />
+              </Button>
+            </Actions>
+          </Body>
         </Container>
       </StyledProject>
-      </ThemeProvider>
-  )}
+    </ThemeProvider>
+  );
 };
 
+Project.propTypes = {
+  dark: PropTypes.bool.isRequired,
+
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  blurb: PropTypes.arrayOf(PropTypes.string).isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string),
+  date: PropTypes.string,
+  repo: PropTypes.string,
+  demo: PropTypes.string.isRequired,
+};
+
+Project.defaultProps = {
+  image: 'static/images/blank.png',
+  skills: [
+    'Other',
+  ],
+  date: 'In Progress',
+  repo: 'https://github.com/arielbk',
+};
+
+export default Project;
+
 const StyledProject = styled.div`
-  background: ${props => props.dark ? '#272727' : '#333'};
+  background: ${props => (props.dark ? '#272727' : '#333')};
   margin: 0;
   width: 100%;
   position: relative;
@@ -99,10 +135,9 @@ const Skills = styled.div`
 
 const Skill = styled.span`
   background: ${props => props.theme.colors.skills[props.skill.toLowerCase()]};
-  color: ${props =>
-    ['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
-      ? '#fff;'
-      : props.theme.colors.black};
+  color: ${props => (['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
+    ? '#fff;'
+    : props.theme.colors.black)};
   padding: .5rem .6rem;
   display: inline-block;
   width: 100%;

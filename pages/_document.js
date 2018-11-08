@@ -2,13 +2,13 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps({ renderPage }) {
     // create an instance of serverstylesheet
     const sheet = new ServerStyleSheet();
 
     // retrieve styles from components in the page
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />),
+    const page = renderPage(
+      App => props => sheet.collectStyles(<App {...props} />),
     );
 
     // extract the style as <style> tags
@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           {/* Output styles in the head */}
           { this.props.styleTags }

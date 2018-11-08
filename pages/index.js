@@ -1,7 +1,8 @@
 import Head from 'next/head';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+
 import Infobar from '../components/Infobar';
 import Portfolio from '../components/Portfolio';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import variables from '../components/variables';
 
 const Content = styled.div`
@@ -46,27 +47,27 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
 
     &:hover {
-      color: ${props=> props.theme.colors.lightblue};
+      color: ${props => props.theme.colors.lightblue};
     }
   }
 `;
 
 export default () => (
   <ThemeProvider theme={variables}>
-  <Content>
-    <Head>
-      <title>arielbk portfolio</title>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
+    <Content>
+      <Head>
+        <title>arielbk portfolio</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
 
-      <link rel="shortcut icon" href="static/images/favicon.ico"></link>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
-    <GlobalStyle />
-    <Infobar />
-    <Portfolio />
-  </Content>
+        <link rel="shortcut icon" href="static/images/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <GlobalStyle />
+      <Infobar />
+      <Portfolio />
+    </Content>
   </ThemeProvider>
 );
