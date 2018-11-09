@@ -10,7 +10,11 @@ const Project = (props) => {
     <ThemeProvider theme={variables}>
       <StyledProject dark={dark}>
         <Container>
-          <TopTitle><a href={demo}>{name}</a></TopTitle>
+          <TopTitle>
+            <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
+              {name}
+            </a>
+          </TopTitle>
           <Date>{date}</Date>
 
           <Skills>
@@ -30,7 +34,7 @@ const Project = (props) => {
 
           <Body>
             <BottomTitle>
-              <a href={demo} target="_blank" rel="noopener noreferrer">
+              <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
                 {name}
               </a>
             </BottomTitle>
@@ -160,7 +164,7 @@ const Date = styled.div`
   z-index: 0;
   position: absolute;
   right: 2rem;
-  top: 5rem;
+  top: 4.5rem;
   display: inline-block;
   width: 100%;
   margin: 0;

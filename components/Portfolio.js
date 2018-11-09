@@ -1,6 +1,6 @@
-import Project from './Project';
 import styled, { ThemeProvider } from 'styled-components';
-import variables from '../components/variables';
+import Project from './Project';
+import variables from './variables';
 
 // maybe this should be based on an API call - mongoose and mlab?
 const projects = [
@@ -8,117 +8,117 @@ const projects = [
     name: 'Film Base',
     image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
-      "A frontend website that fetches film information from The Movie Database API.",
-      "I incorporated ESLint into my workflow to enforce coding best practices."
+      'A frontend website that fetches film information from The Movie Database API.',
+      'I incorporated ESLint into my workflow to enforce coding best practices.',
     ],
     skills: ['JavaScript', 'React'],
     date: 'In Progress',
     repo: 'https://github.com/arielbk/filmbase',
-    demo: 'https://movies-eyqgndvdgr.now.sh'
+    demo: 'https://movies-ueunjtlhun.now.sh',
   },
   {
     name: 'arielbk',
     image: 'static/images/arielbk/main-screen.png',
     blurb: [
-      "This website. A platform to showcase my web development projects.",
-      "It has been a great introduction to server-side rendering using NextJS."
+      'This website. A platform to showcase my web development projects.',
+      'It has been a great introduction to server-side rendering using NextJS.',
     ],
     skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
     date: 'October 2018',
     repo: 'https://github.com/arielbk/arielbk',
-    demo: 'https://arielbk.com/'
+    demo: 'https://arielbk.com/',
   },
   {
     name: 'BPM Count',
     image: 'static/images/bpmcount/main-screen.png',
     blurb: [
-      "An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).",
-      "I was insired to make this because it is a tool that I find helpful and use frequently."
+      'An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).',
+      'I was insired to make this because it is a tool that I find helpful and use frequently.',
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'September 2018',
     repo: 'https://github.com/arielbk/BPM-Counter',
-    demo: 'https://arielbk.com/bpmcount'
+    demo: 'https://arielbk.com/bpmcount',
   },
   {
     name: 'Lucid',
     image: 'static/images/lucid/main-screen.png',
     blurb: [
-      "A project undertaken as part of a 'Chingu Cohort', a community coding 'build-to-learn' project.",
-      "This was great UI design and code practice, and working with other coders was invaluable."
+      'A project undertaken as part of a \'Chingu Cohort\', a community coding \'build-to-learn\' project.',
+      'This was great UI design and code practice, and working with other coders was invaluable.',
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'August 2018',
     repo: 'https://github.com/chingu-voyage6/Geckos-Team-03/tree/master',
-    demo: 'https://arielbk.com/lucid/'
+    demo: 'https://arielbk.com/lucid/',
   },
   {
     name: 'Pomodoro Timer',
     image: 'static/images/pomodoro/main-screen.png',
     blurb: [
-      "A timer to track work and break periods with the Pomodoro productivity hack.",
-      "A pet project that has gone through uncountable rewrites as I continue learning."
+      'A timer to track work and break periods with the Pomodoro productivity hack.',
+      'A pet project that has gone through uncountable rewrites as I continue learning.',
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'July 2018',
     repo: 'https://github.com/arielbk/pomodoro-timer',
-    demo: 'https://arielbk.com/pomodorotimer'
+    demo: 'https://arielbk.com/pomodorotimer',
   },
   {
     name: 'UX Portfolio',
     image: 'static/images/marijap/main-screen.png',
     blurb: [
-      "A design/coding collaboration for the UX designer Marija Peraic's portfolio.",
-      "Working together with a designer was insightful — design first, and then code."
+      'A design/coding collaboration for the UX designer Marija Peraic\'s portfolio.',
+      'Working together with a designer was insightful — design first, and then code.',
     ],
     skills: ['Bootstrap', 'Sass', 'JavaScript', 'jQuery'],
     date: 'June 2018',
     repo: 'https://github.com/arielbk/portfolio-marija',
-    demo: 'https://marijap.com/'
+    demo: 'https://marijap.com/',
   },
   {
     name: 'Date Facts',
     image: 'static/images/datefacts/main-screen.png',
-    blurb: ["Shows facts for any date based on data fetched from the 'Number Facts' API.",
-      "This was great practice for communicating with an API and building out a simple frontend."
+    blurb: ['Shows facts for any date based on data fetched from the \'Number Facts\' API.',
+      'This was great practice for communicating with an API and building out a simple frontend.',
     ],
     skills: ['JavaScript', 'React'],
     date: 'June 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/date-facts-react',
-    demo: 'http://datefacts.glitch.me/'
+    demo: 'http://datefacts.glitch.me/',
   },
   {
     name: 'Word Counter',
     image: 'static/images/wordcounter/main-screen.png',
     blurb: [
-      "This was made to practice modern JavaScript, before reconstructing it in React.",
-      "Migrating a simple app like this was a great introduction to the framework."],
+      'This was made to practice modern JavaScript, before reconstructing it in React.',
+      'Migrating a simple app like this was a great introduction to the framework.'],
     skills: ['JavaScript', 'React'],
     date: 'May 2018',
     repo: 'https://github.com/arielbk/react-apps/tree/master/word-counter-react',
-    demo: 'https://arielbk.com/word-counter-react/'
+    demo: 'https://arielbk.com/word-counter-react/',
   },
   {
     name: 'Kalender',
     image: 'static/images/kalender/main-screen.png',
     blurb: [
-      "Final showcase for an online computer science course, Harvard's CS50X.",
-      "An open project to bring together twelve weeks of valuable study."
+      'Final showcase for an online computer science course, Harvard\'s CS50X.',
+      'An open project to bring together twelve weeks of valuable study.',
     ],
     skills: ['Python', 'Flask', 'JavaScript'],
     date: 'May 2018',
     repo: 'https://github.com/arielbk/kalender-heroku',
     demo: 'https://kalender-deploy.herokuapp.com/',
-  }
+  },
 ];
 
 export default () => (
   <ThemeProvider theme={variables}>
-  <Portfolio>
-    <Arrow width="40" height="87" viewBox="0 0 40 87">
-      <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#505152" />
-    </Arrow>
-    <header>
+    <Portfolio>
+      <Arrow width="40" height="87" viewBox="0 0 40 87">
+        <path d="M39.75 43.3013L0 86.6025V0L39.75 43.3013Z" fill="#505152" />
+      </Arrow>
+      <header>
         <Title>My projects</Title>
         <Lead>
           A selection of coding projects, with the more recent at the top.
@@ -144,21 +144,23 @@ export default () => (
             </span>
           </a>
         </Contact>
-    </header>
+      </header>
 
-    {projects.map((project, index) => (
-      <Project {...project} key={project.name} dark={(index%2 === 0)} />
-    ))}
+      {projects.map((project, index) => (
+        <Project {...project} key={project.name} dark={(index % 2 === 0)} />
+      ))}
 
-    <footer>
-      <div>
-        <Title>Get in touch!</Title>
-        <Lead>
-          The best way is to send me an <a href="mailto:buchwald.kearney@gmail.com">email</a>
-        </Lead>
-      </div>
-    </footer>
-  </Portfolio>
+      <footer>
+        <div>
+          <Title>Get in touch!</Title>
+          <Lead>
+            The best way is to send me an
+            {' '}
+            <a href="mailto:buchwald.kearney@gmail.com">email</a>
+          </Lead>
+        </div>
+      </footer>
+    </Portfolio>
   </ThemeProvider>
 );
 
