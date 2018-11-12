@@ -21,9 +21,9 @@ const projects = [
     image: 'static/images/arielbk/main-screen.png',
     blurb: [
       'This website. A platform to showcase my web development projects.',
-      'It has been a great introduction to server-side rendering using NextJS.',
+      'It has been a great introduction to server-side rendering using Next.js.',
     ],
-    skills: ['JavaScript', 'React', 'NextJS', 'Figma'],
+    skills: ['JavaScript', 'React', 'Next.js', 'Figma'],
     date: 'October 2018',
     repo: 'https://github.com/arielbk/arielbk',
     demo: 'https://arielbk.com/',
@@ -33,7 +33,7 @@ const projects = [
     image: 'static/images/bpmcount/main-screen.png',
     blurb: [
       'An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).',
-      'I was insired to make this because it is a tool that I find helpful and use frequently.',
+      'I was inpsired to make this because it is a tool that I find helpful and use frequently.',
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'September 2018',
