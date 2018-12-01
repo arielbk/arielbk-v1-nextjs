@@ -58,6 +58,14 @@ export default () => (
               </span>
             </a>
           </div>
+          <div>
+            <a href="https://www.linkedin.com/in/arielbk">
+              <span>
+                <i className="fab fa-linkedin" />
+                <h4>LinkedIn</h4>
+              </span>
+            </a>
+          </div>
         </Contact>
       </Container>
     </Infobar>

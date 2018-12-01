@@ -2,14 +2,13 @@ import styled, { ThemeProvider } from 'styled-components';
 import Project from './Project';
 import variables from './variables';
 
-// maybe this should be based on an API call - mongoose and mlab?
 const projects = [
   {
     name: 'Film Base',
     image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
       'A frontend website that fetches film information from The Movie Database API.',
-      'I incorporated ESLint into my workflow to enforce coding best practices.',
+      'I incorporated ESLint into my workflow and began using React Testing Library with Jest.',
     ],
     skills: ['JavaScript', 'React'],
     date: 'In Progress',
@@ -23,7 +22,7 @@ const projects = [
       'This website. A platform to showcase my web development projects.',
       'It has been a great introduction to server-side rendering using Next.js.',
     ],
-    skills: ['JavaScript', 'React', 'Next.js', 'Figma'],
+    skills: ['JavaScript', 'React', 'Nextjs', 'Figma'],
     date: 'October 2018',
     repo: 'https://github.com/arielbk/arielbk',
     demo: 'https://arielbk.com/',
@@ -33,7 +32,7 @@ const projects = [
     image: 'static/images/bpmcount/main-screen.png',
     blurb: [
       'An app to tap along with music and discover the tempo — measured in Beats Per Minute (BPM).',
-      'I was inpsired to make this because it is a tool that I find helpful and use frequently.',
+      'I was inspired to make this because it is a tool that I find helpful and use frequently.',
     ],
     skills: ['JavaScript', 'React', 'Sketch'],
     date: 'September 2018',
@@ -143,6 +142,12 @@ export default () => (
               Codepen
             </span>
           </a>
+          <a href="https://www.linkedin.com/in/arielbk">
+            <span>
+              <i className="fab fa-linkedin" />
+              Email
+            </span>
+          </a>
         </Contact>
       </header>
 
@@ -229,7 +234,7 @@ const Contact = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 260px;
+  width: 300px;
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -245,8 +250,8 @@ const Contact = styled.div`
     background: rgba(10,10,10,0.5);
     font-size: 0.6rem;
     text-align: center;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     box-shadow:
       0 15px 35px rgba(37,37,80,0.1), 0 5px 15px rgba(0,0,0,.06);
 
