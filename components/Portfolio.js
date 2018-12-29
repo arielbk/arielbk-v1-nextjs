@@ -145,7 +145,7 @@ export default () => (
           <a href="https://www.linkedin.com/in/arielbk">
             <span>
               <i className="fab fa-linkedin" />
-              Email
+              LinkedIn
             </span>
           </a>
         </Contact>
