@@ -19,11 +19,11 @@
     "url": "https://github.com/arielbk/arielbk/issues"
   },
   "dependencies": {
-    "next": "^7.0.2",
+    "next": "latest",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "styled-components": "^4.0.0"
+    "styled-components": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

@@ -1,92 +1,6 @@
-import styled, { ThemeProvider } from 'styled-components';
-import PropTypes from 'prop-types';
-import variables from './variables';
+import styled from 'styled-components';
 
-const Project = (props) => {
-  const {
-    dark, demo, name, date, skills, image, blurb, repo,
-  } = props;
-  return (
-    <ThemeProvider theme={variables}>
-      <StyledProject dark={dark}>
-        <Container>
-          <TopTitle>
-            <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
-              {name}
-            </a>
-          </TopTitle>
-          <Date>{date}</Date>
-
-          <Skills>
-            {skills.length
-            && skills.map(skill => (
-              <Skill skill={skill} key={skill}>{skill}</Skill>
-            ))}
-          </Skills>
-          <ThumbContainer>
-            <Thumb src={image} alt={`${name} main page screenshot`} />
-            <a href={demo} target="_blank" rel="noopener noreferrer">
-              <ThumbOverlay>
-                <i className="fas fa-external-link-alt" />
-              </ThumbOverlay>
-            </a>
-          </ThumbContainer>
-
-          <Body>
-            <BottomTitle>
-              <a href={demo} target="_blank" rel="noopener noreferrer" title={`${name} demo`}>
-                {name}
-              </a>
-            </BottomTitle>
-
-            <Text>
-              {/* eslint-disable-next-line react/no-array-index-key */}
-              {blurb.map((para, i) => (<p key={i}>{para}</p>))}
-            </Text>
-
-            <Actions>
-              <Button href={repo} target="_blank">
-                Code
-                {' '}
-                <i className="fas fa-external-link-alt" />
-              </Button>
-              <Button href={demo} target="_blank">
-                Demo
-                {' '}
-                <i className="fas fa-external-link-alt" />
-              </Button>
-            </Actions>
-          </Body>
-        </Container>
-      </StyledProject>
-    </ThemeProvider>
-  );
-};
-
-Project.propTypes = {
-  dark: PropTypes.bool.isRequired,
-
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  blurb: PropTypes.arrayOf(PropTypes.string).isRequired,
-  skills: PropTypes.arrayOf(PropTypes.string),
-  date: PropTypes.string,
-  repo: PropTypes.string,
-  demo: PropTypes.string.isRequired,
-};
-
-Project.defaultProps = {
-  image: 'static/images/blank.png',
-  skills: [
-    'Other',
-  ],
-  date: 'In Progress',
-  repo: 'https://github.com/arielbk',
-};
-
-export default Project;
-
-const StyledProject = styled.div`
+export const StyledProject = styled.div`
   background: ${props => (props.dark ? '#272727' : '#333')};
   margin: 0;
   width: 100%;
@@ -99,7 +13,7 @@ const StyledProject = styled.div`
   }
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   padding: 4rem;
   max-width: 1200px;
   position: relative;
@@ -120,7 +34,7 @@ const Container = styled.div`
   }
 `;
 
-const Skills = styled.div`
+export const Skills = styled.div`
   top: 12rem;
   width: 105px;
   position: absolute;
@@ -137,7 +51,7 @@ const Skills = styled.div`
   }
 `;
 
-const Skill = styled.span`
+export const Skill = styled.span`
   background: ${props => props.theme.colors.skills[props.skill.toLowerCase()]};
   color: ${props => (['HTML', 'CSS', 'Bootstrap', 'Sass', 'jQuery', 'Python'].includes(props.skill)
     ? '#fff;'
@@ -160,7 +74,7 @@ const Skill = styled.span`
   }
 `;
 
-const Date = styled.div`
+export const Date = styled.div`
   z-index: 0;
   position: absolute;
   right: 2rem;
@@ -180,7 +94,7 @@ const Date = styled.div`
   }
 `;
 
-const ThumbContainer = styled.div`
+export const ThumbContainer = styled.div`
   width: 100%;
   margin-bottom: 2.6rem;
   position: relative;
@@ -195,7 +109,7 @@ const ThumbContainer = styled.div`
   }
 `;
 
-const Thumb = styled.img`
+export const Thumb = styled.img`
   z-index: 2;
   width: 100%;
   border-radius: 3px;
@@ -205,7 +119,7 @@ const Thumb = styled.img`
   filter: grayscale(1);
 `;
 
-const ThumbOverlay = styled.div`
+export const ThumbOverlay = styled.div`
   ${props => props.theme.transition('opacity')};
   z-index: 100;
   position: absolute;
@@ -229,7 +143,7 @@ const ThumbOverlay = styled.div`
   }
 `;
 
-const Body = styled.div`
+export const Body = styled.div`
   z-index: 2;
   width: 100%;
   margin-top: 1rem;
@@ -252,7 +166,7 @@ const Body = styled.div`
   }
 `;
 
-const Text = styled.div`
+export const Text = styled.div`
   width: 73%;
   margin-right: 1.5rem;
   color: ${props => props.theme.colors.lightgrey};
@@ -275,7 +189,7 @@ const Text = styled.div`
   }
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   z-index: 2;
   font-size: 2rem;
   font-weight: 200;
@@ -292,7 +206,7 @@ const Title = styled.h3`
   }
 `;
 
-const TopTitle = styled(Title)`
+export const TopTitle = styled(Title)`
   margin: .2rem 0 3.5rem 0;
 
   @media ${props => props.theme.media.xlg} {
@@ -304,7 +218,7 @@ const TopTitle = styled(Title)`
   }
 `;
 
-const BottomTitle = styled(Title)`
+export const BottomTitle = styled(Title)`
   margin: 0 0 1.5rem 0;
   display: none;
     
@@ -313,7 +227,7 @@ const BottomTitle = styled(Title)`
   }
 `;
 
-const Actions = styled.div`
+export const Actions = styled.div`
   
   @media ${props => props.theme.media.sm} {
     width: 100%;
@@ -327,7 +241,7 @@ const Actions = styled.div`
 `;
 
 // maybe make this an actual button?
-const Button = styled.a`
+export const Button = styled.a`
   margin-bottom: 1rem;
   display: inline-block;
   background: ${props => props.theme.colors.darkgrey};
