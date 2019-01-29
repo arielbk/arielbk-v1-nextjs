@@ -31,6 +31,7 @@ const variables = {
       flask: '#fff',
       figma: '#60C290',
       nextjs: '#fff',
+      mongodb: '#69B241',
     },
   },
 };

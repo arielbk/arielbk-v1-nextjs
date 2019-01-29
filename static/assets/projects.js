@@ -3,13 +3,13 @@ const projects = [
     name: 'Film Base',
     image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
-      'A frontend website that fetches film information from The Movie Database API.',
-      'I incorporated ESLint into my workflow and began using React Testing Library with Jest.',
+      'A fullstack website where users can browse films and save their favourites.',
+      'This is my first full stack project, and one where I began to incorporate testing into my workflow.',
     ],
-    skills: ['JavaScript', 'React'],
+    skills: ['JavaScript', 'React', 'Express', 'MongoDB'],
     date: 'In Progress',
     repo: 'https://github.com/arielbk/filmbase',
-    demo: 'https://movies-ueunjtlhun.now.sh',
+    demo: 'https://film-base.herokuapp.com',
   },
   {
     name: 'arielbk',
