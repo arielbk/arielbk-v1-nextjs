@@ -118,6 +118,10 @@ export const Thumb = styled.img`
               0 15px 35px rgba(37, 37, 80, 0.1),
               0 5px 15px rgba(0,0,0,.06);
   filter: grayscale(1);
+
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 export const ThumbOverlay = styled.div`

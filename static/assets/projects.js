@@ -1,5 +1,17 @@
 const projects = [
   {
+    name: 'Habit Tracker',
+    image: 'static/images/habittracker/main-screen.jpg',
+    blurb: [
+      'A project undertaken with other developers as part of a Chingu build-to-learn project.',
+      'I have picked up lots of best practices along the way and got to really focus on design and testing.',
+    ],
+    skills: ['JavaScript', 'React', 'Express', 'MongoDB'],
+    date: 'In Progress',
+    repo: 'https://github.com/chingu-voyages/bears-project-8',
+    demo: 'https://chingu-habit-tracker.herokuapp.com',
+  },
+  {
     name: 'Film Base',
     image: 'static/images/filmbase/main-screen.jpg',
     blurb: [
@@ -7,7 +19,7 @@ const projects = [
       'This is my first full stack project, and one where I began to incorporate testing into my workflow.',
     ],
     skills: ['JavaScript', 'React', 'Express', 'MongoDB'],
-    date: 'In Progress',
+    date: 'January 2019',
     repo: 'https://github.com/arielbk/filmbase',
     demo: 'https://film-base.herokuapp.com',
   },
